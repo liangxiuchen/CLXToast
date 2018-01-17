@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CLXToast_Example' do
+  pod 'CLXToast', :path => '../'
+
+  target 'CLXToast_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
