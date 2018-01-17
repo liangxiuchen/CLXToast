@@ -1,0 +1,6 @@
+framework module CLXToast {
+  umbrella header "CLXToast-umbrella.h"
+
+  export *
+  module * { export * }
+}

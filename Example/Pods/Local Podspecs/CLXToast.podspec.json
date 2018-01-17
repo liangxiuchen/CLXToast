@@ -1,0 +1,22 @@
+{
+  "name": "CLXToast",
+  "version": "0.1.0",
+  "summary": "A short description of CLXToast.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/liangxiu.chen.cn@gmail.com/CLXToast",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liangxiu.chen.cn@gmail.com": "liangxiu.chen.cn@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/liangxiu.chen.cn@gmail.com/CLXToast.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CLXToast/Classes/**/*"
+}
