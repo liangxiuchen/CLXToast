@@ -21,9 +21,7 @@ class ViewController: UIViewController {
 
         func onlyTitle() {
             Toast(style: .hud).title("nihao").subtitle("subtitle").show(animated: true) {
-                DispatchQueue.main.async {
-//                    Toast.cancelAll()
-                }
+//                Toast.cancelAll()
             }
         }
         demos.append(onlyTitle)
