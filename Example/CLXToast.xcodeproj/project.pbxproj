@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		72082FDB201045E500E1DFFB /* Hud.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72082FD9201045E500E1DFFB /* Hud.gif */; };
+		72082FDC201045E500E1DFFB /* waiting.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72082FDA201045E500E1DFFB /* waiting.gif */; };
 		FE53AF89731691FDE663BBFD /* Pods_CLXToast_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9A6E8669CCEAC84C08C03D /* Pods_CLXToast_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0953D0376A24D92D75E2202B /* Pods-CLXToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLXToast_Tests/Pods-CLXToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		154227BEDD31E3F697E31B08 /* CLXToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CLXToast.podspec; path = ../CLXToast.podspec; sourceTree = "<group>"; };
+		154227BEDD31E3F697E31B08 /* CLXToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CLXToast.podspec; path = ../CLXToast.podspec; sourceTree = "<group>"; };
 		5E9A6E8669CCEAC84C08C03D /* Pods_CLXToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* CLXToast_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLXToast_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,10 +43,12 @@
 		607FACE51AFB9204008FA782 /* CLXToast_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLXToast_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		A083B4DD3BC8DC94F947B1F5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		72082FD9201045E500E1DFFB /* Hud.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Hud.gif; sourceTree = "<group>"; };
+		72082FDA201045E500E1DFFB /* waiting.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waiting.gif; sourceTree = "<group>"; };
+		A083B4DD3BC8DC94F947B1F5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C72D3F4EAA81516268DB3DD2 /* Pods-CLXToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLXToast_Example/Pods-CLXToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D804381C46EC1DAFF1A2AE13 /* Pods_CLXToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E28C945CFA19746B3128696E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E28C945CFA19746B3128696E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ED3903FB72ADE482979411B9 /* Pods-CLXToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLXToast_Example/Pods-CLXToast_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ED42C763B50ECF76BE212E23 /* Pods-CLXToast_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLXToast_Tests/Pods-CLXToast_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,11 +147,22 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				72082FD8201045E500E1DFFB /* DocumentAssets */,
 				154227BEDD31E3F697E31B08 /* CLXToast.podspec */,
 				A083B4DD3BC8DC94F947B1F5 /* README.md */,
 				E28C945CFA19746B3128696E /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		72082FD8201045E500E1DFFB /* DocumentAssets */ = {
+			isa = PBXGroup;
+			children = (
+				72082FD9201045E500E1DFFB /* Hud.gif */,
+				72082FDA201045E500E1DFFB /* waiting.gif */,
+			);
+			name = DocumentAssets;
+			path = ../DocumentAssets;
 			sourceTree = "<group>";
 		};
 		749E4431C5B77F0288E4CA50 /* Frameworks */ = {
@@ -248,6 +263,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72082FDC201045E500E1DFFB /* waiting.gif in Resources */,
+				72082FDB201045E500E1DFFB /* Hud.gif in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
