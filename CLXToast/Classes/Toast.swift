@@ -20,6 +20,9 @@ public final class Toast: UIView, Toastable {
     @objc public func title(_ newValue: String) -> Toast {//标题的快捷链式语法糖 (hud 模式)
         if self.titleLabel == nil {
             self.titleLabel = UILabel()
+            self.titleLabel.textColor = UIColor.white
+            self.titleLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.size.width
+            self.titleLabel.numberOfLines = 0
         }
         self.titleLabel.text = newValue
         return self
@@ -30,6 +33,9 @@ public final class Toast: UIView, Toastable {
     @objc public func subtitle(_ newValue: String) -> Toast {//子标题的快捷链式语法糖 (hud 模式)
         if self.subtitleLabel == nil {
             self.subtitleLabel = UILabel()
+            self.subtitleLabel.textColor = UIColor.white
+            self.subtitleLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.size.width
+            self.subtitleLabel.numberOfLines = 0
         }
         self.subtitleLabel.text = newValue
         return self
@@ -246,6 +252,7 @@ extension Toast {
             UIView.animate(withDuration: self.dismissDuration, delay: delay, options: [.curveEaseOut, .allowUserInteraction], animations: {
                 self.contentView.alpha = 0
             }, completion: { (_) in
+                self.removeFromSuperview()
                 operation.finish()
             })
         }
@@ -311,38 +318,32 @@ extension Toast {
 
     func addSubviewsInWaitingCase() {
         if self.activity == nil {
-            self.activity = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            self.activity = UIActivityIndicatorView()
             self.activity.hidesWhenStopped = false
+        }
+        if self.activity.superview != self.contentView {
             self.contentView.addSubview(self.activity)
         }
         self.activity.startAnimating()
 
         let empty = self.activityPrompt?.text?.isEmpty ?? true
-        if !empty {
-            self.activityPrompt?.textColor = UIColor.white
+        if !empty && self.activityPrompt?.superview != self.contentView {
             self.contentView.addSubview(self.activityPrompt!)
         }
     }
 
     func addSubViewsInHudCase() {
-        if let icon = self.iconView {
+        if let icon = self.iconView, icon.superview == nil {
             self.contentView.addSubview(icon)
         }
 
         var empty = self.titleLabel?.text?.isEmpty ?? true
-        if !empty {
-            self.titleLabel.textColor = UIColor.white
-            self.titleLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.size.width
-            self.titleLabel.numberOfLines = 0
-            self.titleLabel.textAlignment = .center
+        if !empty && self.titleLabel.superview != self.contentView {
             self.contentView.addSubview(self.titleLabel)
         }
 
         empty = self.subtitleLabel?.text?.isEmpty ?? true
-        if !empty {
-            self.subtitleLabel.textColor = UIColor.white
-            self.subtitleLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.size.width
-            self.subtitleLabel.numberOfLines = 0
+        if !empty && self.subtitleLabel.superview != self.contentView {
             self.contentView.addSubview(self.subtitleLabel)
         }
     }
