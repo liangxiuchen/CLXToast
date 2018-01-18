@@ -84,7 +84,7 @@ public final class Toast: UIView, Toastable {
         }
     }
 
-    weak var toastTransaction: ToastOperation? //Toast显示的完整事务
+    weak var transaction: ToastOperation? //Toast显示的完整事务
 
     fileprivate(set) public var style: ToastStyle
 
@@ -142,24 +142,25 @@ extension Toast {
 
 //MARK: 类型方法和属性
 extension Toast {
-    fileprivate static let queue: OperationQueue = {
+    fileprivate static let animations: OperationQueue = {
         let q = OperationQueue()
         q.underlyingQueue = DispatchQueue.main
         return q;
     }()
-    fileprivate static let toastQueue: OperationQueue = {
+    fileprivate static let transactions: OperationQueue = {
         let q = OperationQueue()
         q.underlyingQueue = DispatchQueue.main
         return q;
     }()
 
     @objc static public func cancelAll() {
-        Toast.toastQueue.cancelAllOperations()
+        Toast.transactions.cancelAllOperations()
     }
 }
 
 extension Toast {
-    @objc public func show(animated: Bool = true, with completion: CompletionBlock? = nil) {
+    @discardableResult
+    @objc public func show(animated: Bool = true, with completion: CompletionBlock? = nil) -> Toast {
         func showInKeyWindow() {
             guard let keyWindow = UIApplication.shared.keyWindow else {
                 return
@@ -173,55 +174,57 @@ extension Toast {
                 showInKeyWindow()
             }
         }
+        return self
     }
-
-    @objc public func show(in container: UIView, with layout: ((Toast) -> Void)?, animated: Bool, completion: CompletionBlock?) {
-        guard self.toastTransaction == nil else {
+    @discardableResult
+    @objc public func show(in container: UIView, with layout: ((Toast) -> Void)?, animated: Bool, completion: CompletionBlock?) -> Toast {
+        guard self.transaction == nil else {
             //不允许重复调用
-            return;
+            return self;
         }
         /* hud提示,自动做消失 */
         if self.style == .hud || self.style == .custom_hud {
-            let toastTransaction = ToastOperation(style: .toastTransaction, task: { (op) in
+            let transaction = ToastOperation(style: .transaction, task: { (op) in
                 let show = self.showOperation(with: layout, animated: animated, in: container)
                 let dismiss = self.dismissOperation(delay: self.duration)
                 dismiss.addDependency(show)
                 dismiss.completionBlock = {
                     op.finish()
                 }
-                Toast.queue.addOperations([show, dismiss], waitUntilFinished: false)
+                Toast.animations.addOperations([show, dismiss], waitUntilFinished: false)
             })
-            toastTransaction.completionBlock = completion;
-            if let last = Toast.toastQueue.operations.last, !isConcurrent {
-                toastTransaction.addDependency(last)
+            transaction.completionBlock = completion;
+            if let last = Toast.transactions.operations.last, !isConcurrent {
+                transaction.addDependency(last)
             }
-            Toast.toastQueue.addOperation(toastTransaction)
-            self.toastTransaction = toastTransaction
+            Toast.transactions.addOperation(transaction)
+            self.transaction = transaction
         } else if self.style == .waiting || self.style == .custom_waiting {
             /* waiting提示,自动做消失 */
-            let toastTransaction = ToastOperation(style: .toastTransaction, task: { (_) in
+            let transaction = ToastOperation(style: .transaction, task: { (_) in
                 let show = self.showOperation(with: layout, animated: animated, in: container)
-                Toast.queue.addOperation(show)
+                Toast.animations.addOperation(show)
             })
-            if let last = Toast.toastQueue.operations.last, !isConcurrent {
-                toastTransaction.addDependency(last)
+            if let last = Toast.transactions.operations.last, !isConcurrent {
+                transaction.addDependency(last)
             }
-            Toast.toastQueue.addOperation(toastTransaction)
-            self.toastTransaction = toastTransaction
+            Toast.transactions.addOperation(transaction)
+            self.transaction = transaction
         }
+        return self
     }
 
-    @objc public func dismiss(animated:Bool, with completion: CompletionBlock?) {
+    @objc public func dismiss(animated:Bool = true, with completion: CompletionBlock? = nil) {
         if self.style == .custom_waiting || self.style == .waiting {
-            if let executing = self.toastTransaction?.isExecuting, executing {
+            if let executing = self.transaction?.isExecuting, executing {
                 let dismiss = self.dismissOperation(delay: 0)
-                self.toastTransaction?.completionBlock = completion
+                self.transaction?.completionBlock = completion
                 dismiss.completionBlock = {
-                    self.toastTransaction?.finish()
+                    self.transaction?.finish()
                 }
-                Toast.queue.addOperation(dismiss)
+                Toast.animations.addOperation(dismiss)
             } else {
-                self.toastTransaction?.cancel()
+                self.transaction?.cancel()
             }
 
         } else if self.style == .hud || self.style == .custom_hud {
@@ -232,7 +235,7 @@ extension Toast {
     }
 
     @objc public func cancel() {
-        self.toastTransaction?.cancel()
+        self.transaction?.cancel()
     }
 
     func dismissOperation(delay: TimeInterval) -> ToastOperation {

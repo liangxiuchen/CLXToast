@@ -28,15 +28,11 @@ class ViewController: UIViewController {
         }
         demos.append(onlyTitle)
         func onlySubTitle() {
-            let toast = Toast(style: .hud)
-//            toast.isConcurrent = true
-            toast.subtitle("only subtitle").show()
+            Toast(style: .hud).subtitle("only subtitle").show()
         }
         demos.append(onlySubTitle)
         func onlyIcon() {
-            let toast = Toast(style: .hud)
-            toast.iconView = UIImageView(image: UIImage(named: "toast"))
-            toast.show(animated: true, with: nil)
+            let _ = Toast(style: .hud).icon(UIImage(named: "toast")).show()
         }
         demos.append(onlyIcon)
         func allTitleWithoutIcon() {
@@ -108,15 +104,13 @@ class ViewController: UIViewController {
         }
         waitingDemos.append(activityOnly)
         func withPromptWaiting() {
-            let toast = Toast(style: .waiting)
-            toast.prompt("hello waiting").show(animated: false) {
+            let toast = Toast(style: .waiting).prompt("hello waiting").show(animated: false) {
                 print("default waiting")
             }
             DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 1000000)) {
-                toast.dismiss(animated: true, with: nil)
+                toast.dismiss()
             }
         }
-//        waitingDemos.append(withPromptWaiting)
         for demo in waitingDemos {
             demo()
         }

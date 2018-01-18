@@ -11,40 +11,106 @@ import UIKit
 typealias Task = (ToastOperation) -> Void
 
 enum ToastOperationStyle: Int {
-    case show, dismiss, toastTransaction
+    case show, dismiss, transaction
 }
 
 class ToastOperation: Operation {
+
+    private enum State: Int, Comparable {
+        case initialed
+        case ready
+        case executing
+        case finished
+
+        static func <(lhs: ToastOperation.State, rhs: ToastOperation.State) -> Bool {
+            return lhs.rawValue < rhs.rawValue
+        }
+
+        static func ==(lhs: ToastOperation.State, rhs: ToastOperation.State) -> Bool {
+            return lhs.rawValue == rhs.rawValue
+        }
+
+        func canTransitionToState(target: State) -> Bool {
+            switch (self, target) {
+            case (.initialed, .ready):
+                return true
+            case (.ready, .executing):
+                return true
+            case (.ready, .finished):
+                return true
+            case (.executing, .finished):
+                return true
+            case let(lhs, rhs) where lhs == rhs:
+                return true
+            default:
+                return false
+            }
+        }
+    }
+
     let task: Task
     let style: ToastOperationStyle
-    private var _executing: Bool = false
-    private(set) override var isExecuting: Bool {
+
+    private var _state: State = .initialed
+    private let stateLock = NSLock()
+    private var state: State {
         get {
-            return _executing;
+            stateLock.lock()
+            let safe =  _state
+            stateLock.unlock()
+            return safe
         }
-        set {
-            self.willChangeValue(forKey: "isExecuting");
-            _executing = newValue
-            self.didChangeValue(forKey: "isExecuting")
+        set(newState) {
+            willChangeValue(forKey: "state")
+            stateLock.lock()
+            guard _state != .finished else {
+                stateLock.unlock()
+                return
+            }
+            assert(_state.canTransitionToState(target: newState),"Operation \(_state)->\(newState)非法转换")
+            _state = newState
+            stateLock.unlock()
+            didChangeValue(forKey: "state")
         }
     }
 
-    private var _finished: Bool = false
-    private(set) override var isFinished: Bool {
-        get {
-            return _finished
+    override class func keyPathsForValuesAffectingValue(forKey key: String) -> Set<String> {
+        if key == "isReady" || key == "isExecuting" || key == "isFinished" {
+            return ["state"]
         }
-        set {
-            self.willChangeValue(forKey: "isFinished");
-            _finished = newValue
-            self.didChangeValue(forKey: "isFinished")
+        return []
+    }
+
+    override var isExecuting: Bool {
+        return state == .executing
+    }
+
+    override var isFinished: Bool {
+        return state == .finished
+    }
+
+    override var isReady: Bool {
+        switch state {
+        case .initialed:
+            return isCancelled
+        case .ready:
+            return super.isReady || isCancelled
+        default:
+            return false
         }
     }
 
+    #if DEBUG
+    deinit {
+        print("deinit")
+    }
+    #endif
+    
     init(style: ToastOperationStyle, task: @escaping Task) {
         self.task = task
         self.style = style
         super.init()
+        self.state = .ready
     }
 
     override func start() {
@@ -61,12 +127,11 @@ class ToastOperation: Operation {
             finish()
             return
         }
-        self.isExecuting = true
+        state = .executing
         task(self);
     }
 
     func finish() {
-        self.isExecuting = false
-        self.isFinished = true
+        state = .finished
     }
 }
