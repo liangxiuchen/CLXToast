@@ -92,7 +92,7 @@ class ViewController: UIViewController {
             toast.show(animated: false) {
                 print("default waiting")
             }
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 1000000)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
                 toast.dismiss(animated: true, with: {
                     DispatchQueue.main.async {
                         withPromptWaiting()
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
             let toast = Toast(style: .waiting).prompt("hello waiting").show(animated: false) {
                 print("default waiting")
             }
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 1000000)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
                 toast.dismiss()
             }
         }
