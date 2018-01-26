@@ -48,7 +48,7 @@ class ToastOperation: Operation {
         }
     }
 
-    let task: Task
+    var task: Task!
     let style: ToastOperationStyle
 
     private var _state: State = .initialed
@@ -75,7 +75,7 @@ class ToastOperation: Operation {
     }
 
     override class func keyPathsForValuesAffectingValue(forKey key: String) -> Set<String> {
-        if key == "isReady" || key == "isExecuting" || key == "isFinished" {
+        if ["isReady", "isExecuting", "isFinished"].contains(key) {
             return ["state"]
         }
         return []
@@ -100,9 +100,9 @@ class ToastOperation: Operation {
         }
     }
 
-    #if DEBUG
+    #if DEVELOP
     deinit {
-        print("deinit")
+        print("ToastOperation:\(self.style) deinit")
     }
     #endif
     
@@ -133,5 +133,6 @@ class ToastOperation: Operation {
 
     func finish() {
         state = .finished
+        task = nil
     }
 }
