@@ -14,7 +14,7 @@ public enum ToastStyle: Int {
     case custom_waiting //waiting 模式下, 自定义子view和布局
 }
 
-open class ToastContent {
+open class ToastContent: NSObject {
     private(set) var style: ToastStyle
 
     public init(style: ToastStyle) {

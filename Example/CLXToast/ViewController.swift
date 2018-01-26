@@ -9,12 +9,6 @@
 import UIKit
 import CLXToast
 
-class CustomContent: ToastContent {
-//    override init(style: ToastStyle, Inset: UIEdgeInsets, delegate: Toastable) {
-//        super.init(style: .custom_hud, Inset: Inset, delegate: delegate)
-//    }
-}
-
 class ViewController: UIViewController {
 
     @IBAction func showHudDemo(_ sender: UIButton) {
@@ -47,6 +41,10 @@ class ViewController: UIViewController {
         tst.isConcurrent = true
         tst.contentView.backgroundColor = UIColor.green
         tst.aHud.title("it is a concurrent toast").show()
+        // full custom hud Demo
+        let customHud = CustomHudContent()
+        let toast = Toast()
+        toast.custom(content: customHud).show()
         //cancel demo
         Toast.hud.title("i will cancel all, which are appear after me").show(animated: true) {
             Toast.cancelAll()
