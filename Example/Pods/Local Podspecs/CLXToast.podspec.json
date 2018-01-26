@@ -1,9 +1,9 @@
 {
   "name": "CLXToast",
-  "version": "0.1.0",
-  "summary": "A short description of CLXToast.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/liangxiu.chen.cn@gmail.com/CLXToast",
+  "version": "0.2.0",
+  "summary": "CLXToast is a light weight lib",
+  "description": "CLXToast is a light weight lib, but it can be satisfy all kind of scene",
+  "homepage": "https://github.com/liangxiuchen/CLXToast.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "liangxiu.chen.cn@gmail.com": "liangxiu.chen.cn@gmail.com"
   },
   "source": {
-    "git": "https://github.com/liangxiu.chen.cn@gmail.com/CLXToast.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/liangxiuchen/CLXToast.git",
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "8.0"

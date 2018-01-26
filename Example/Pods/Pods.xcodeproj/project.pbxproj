@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0992DD38C076A999B92531243E1761B2 /* Pods-CLXToast_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30AA1548B460E766B6935CE658579C71 /* Pods-CLXToast_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EB071F9B772B45979C53B09F23CE9E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		136138416D8061CF93617852AC3F9909 /* ToastOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4075BE2F3504041130C1E1F239F1544 /* ToastOperation.swift */; };
 		2884933814C98C579443D9DBE499A02C /* Pods-CLXToast_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AF6F05E61E09F5381AFD2CA81993F3 /* Pods-CLXToast_Example-dummy.m */; };
-		2FA63CD7F50239647325DF776EC13DA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4F43C32F6CBF5BE0B8AB69A845DDDEED /* CLXToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 019D21B92E6751C1FFFAA8C345A7AD4B /* CLXToast-dummy.m */; };
-		65F6843003741F538B8C6AFDD835EC24 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A49632F891C1C39BE50FB5C05FCB96 /* Toast.swift */; };
-		7212C29420195C8D00EDAC6B /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212C29320195C8D00EDAC6B /* Content.swift */; };
-		7212C2962019C41000EDAC6B /* DefaultHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212C2952019C41000EDAC6B /* DefaultHud.swift */; };
-		7212C2982019C43E00EDAC6B /* DefaultWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212C2972019C43E00EDAC6B /* DefaultWaiting.swift */; };
-		94EA3EAA87C1EAE4E8206909A7DF27F3 /* CLXToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DAD0718F5BBECB9604F5C79F129F0125 /* CLXToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9D4FCDE70AA3B2E8A7A378132BEACA3 /* ToastOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D0512122764052CE39CF6BB960F498 /* ToastOperation.swift */; };
+		8A82E4172F140A43CC03C175AC52FAB7 /* DefaultHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90947F4203D7E01B90AFD0304C73225D /* DefaultHud.swift */; };
+		8BF827A976198E73958A0B6E08BEB3D4 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107AC953F503BE6EDB38E4937ACA439 /* Toast.swift */; };
+		A34047D75644DAD93D4151F18AD711AA /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78F9F71291CF99B7188046DD42E257 /* Content.swift */; };
+		B4115DD1D44404387AA734E515E3C611 /* CLXToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B78CC8ECC51EAF704166FCFC702A96 /* CLXToast-dummy.m */; };
 		D4A33B4EDCFC0A7DBA293F609639C402 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D62C7FDB32ED650AF6CDA918888F046E /* DefaultWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC56A3C3EEFB48AC936EBB2811F92F /* DefaultWaiting.swift */; };
 		DD15CB4ADC5041B512D16C5604F35B9C /* Pods-CLXToast_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0471E7BF591D2DD140A8934E846A7348 /* Pods-CLXToast_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7A9B6A10CEBDBD2FFE6D6DECC7BD2DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F254B003FC5859A191399F46AD1E6ABF /* CLXToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 839742342E43D6DBC9BE22D23591B98D /* CLXToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB19C455FE31D2FA5C3C6286A22729B5 /* Pods-CLXToast_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B2B98544CF7ACA6336C18BE12CB0ED /* Pods-CLXToast_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -28,59 +28,51 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C2D4FF72DE7C326A1306E8FF7DDA25DE;
+			remoteGlobalIDString = 4B24D52A01ED3D558DA6BE60ED333A75;
 			remoteInfo = CLXToast;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		019D21B92E6751C1FFFAA8C345A7AD4B /* CLXToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLXToast-dummy.m"; sourceTree = "<group>"; };
 		0217DC2BF751A8427B38A2E7ACE3E250 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0471E7BF591D2DD140A8934E846A7348 /* Pods-CLXToast_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLXToast_Tests-umbrella.h"; sourceTree = "<group>"; };
-		0CB504EA07C343F6C0F1EA392CBBBA21 /* CLXToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLXToast.xcconfig; sourceTree = "<group>"; };
 		156BA82FD805F04DD7E1D7029A75132B /* Pods-CLXToast_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLXToast_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1C08899341B0F4CE509604EE8D4B59E8 /* Pods-CLXToast_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CLXToast_Example.modulemap"; sourceTree = "<group>"; };
-		1DEFD35B4A271386593E8606CBAA319E /* Pods_CLXToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE2A29744CBCA7CB01707EC0E28D2FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C08899341B0F4CE509604EE8D4B59E8 /* Pods-CLXToast_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CLXToast_Example.modulemap"; sourceTree = "<group>"; };
+		1DEFD35B4A271386593E8606CBAA319E /* Pods_CLXToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLXToast_Example.framework; path = "Pods-CLXToast_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AA1548B460E766B6935CE658579C71 /* Pods-CLXToast_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLXToast_Example-umbrella.h"; sourceTree = "<group>"; };
-		33CE55E4771A6D36F3DE6F49C3250703 /* CLXToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLXToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3107AC953F503BE6EDB38E4937ACA439 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = CLXToast/Classes/Toast.swift; sourceTree = "<group>"; };
+		33CE55E4771A6D36F3DE6F49C3250703 /* CLXToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CLXToast.framework; path = CLXToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3590EECCB1F71D0245E6A603F2B35781 /* CLXToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CLXToast.modulemap; sourceTree = "<group>"; };
 		36D751DEE6D8F057DF65FD64AF498D5D /* Pods-CLXToast_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLXToast_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		38A49632F891C1C39BE50FB5C05FCB96 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = CLXToast/Classes/Toast.swift; sourceTree = "<group>"; };
 		40AFFB0EA2F379E5F1995EE1E07517B8 /* Pods-CLXToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4CBC56A3C3EEFB48AC936EBB2811F92F /* DefaultWaiting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultWaiting.swift; path = CLXToast/Classes/DefaultWaiting.swift; sourceTree = "<group>"; };
 		5E31768DB620C7D61BD27B8CFA99612C /* Pods-CLXToast_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6236CD7F62C2AB6DCD7205FD07F05E00 /* Pods-CLXToast_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLXToast_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		67ACAE5D357EECA0E20D434D18BACEDA /* CLXToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLXToast-prefix.pch"; sourceTree = "<group>"; };
-		6A2EDBAAB7963510E25FDDB69C27B8F6 /* Pods-CLXToast_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CLXToast_Tests.modulemap"; sourceTree = "<group>"; };
-		7212C29320195C8D00EDAC6B /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		7212C2952019C41000EDAC6B /* DefaultHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHud.swift; sourceTree = "<group>"; };
-		7212C2972019C43E00EDAC6B /* DefaultWaiting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWaiting.swift; sourceTree = "<group>"; };
+		6A2EDBAAB7963510E25FDDB69C27B8F6 /* Pods-CLXToast_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CLXToast_Tests.modulemap"; sourceTree = "<group>"; };
+		70C9B94CA08486E9C1E0ACF6D51BE9F6 /* CLXToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLXToast.xcconfig; sourceTree = "<group>"; };
+		74B78CC8ECC51EAF704166FCFC702A96 /* CLXToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLXToast-dummy.m"; sourceTree = "<group>"; };
+		839742342E43D6DBC9BE22D23591B98D /* CLXToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLXToast-umbrella.h"; sourceTree = "<group>"; };
+		90947F4203D7E01B90AFD0304C73225D /* DefaultHud.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultHud.swift; path = CLXToast/Classes/DefaultHud.swift; sourceTree = "<group>"; };
 		90A3236C44A7F39D60C0AA49744B1EB4 /* Pods-CLXToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		92C50F7C5FA0C824D54B1A12C7801227 /* CLXToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CLXToast.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99E036CAF8C57058C70194018F423ED8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9EE282F8DCDC4DF869E5A705EBC50BEF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D30E2A85F9EC69A640DC2214FD9504 /* Pods-CLXToast_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Example-resources.sh"; sourceTree = "<group>"; };
 		B7AF6F05E61E09F5381AFD2CA81993F3 /* Pods-CLXToast_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLXToast_Example-dummy.m"; sourceTree = "<group>"; };
 		B8E8F07BC29C17893EC5655A4BC5EA4D /* Pods-CLXToast_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1468243B638B9DC35278F072BEC588C /* Pods-CLXToast_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Tests-resources.sh"; sourceTree = "<group>"; };
+		CC78F9F71291CF99B7188046DD42E257 /* Content.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Content.swift; path = CLXToast/Classes/Content.swift; sourceTree = "<group>"; };
 		DA201EC1F8F9EBE668376B7D8F90FCCA /* Pods-CLXToast_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLXToast_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DAD0718F5BBECB9604F5C79F129F0125 /* CLXToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLXToast-umbrella.h"; sourceTree = "<group>"; };
 		DC1C93AE71AD6C7DE58186C3CD585818 /* Pods-CLXToast_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		E146F3311138A24CE4EA0805E0AE4E27 /* Pods_CLXToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6E53CA865CF426F77EE7F4AB9583B7 /* CLXToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLXToast-prefix.pch"; sourceTree = "<group>"; };
+		E146F3311138A24CE4EA0805E0AE4E27 /* Pods_CLXToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLXToast_Tests.framework; path = "Pods-CLXToast_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B2B98544CF7ACA6336C18BE12CB0ED /* Pods-CLXToast_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLXToast_Tests-dummy.m"; sourceTree = "<group>"; };
-		E7D0512122764052CE39CF6BB960F498 /* ToastOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastOperation.swift; path = CLXToast/Classes/ToastOperation.swift; sourceTree = "<group>"; };
+		F4075BE2F3504041130C1E1F239F1544 /* ToastOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastOperation.swift; path = CLXToast/Classes/ToastOperation.swift; sourceTree = "<group>"; };
 		FE03A7B07379C973E99FC98AB621F01E /* Pods-CLXToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		08EA4D51C579F5C5C67C61C0BB32B240 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2FA63CD7F50239647325DF776EC13DA9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		593FDFFFA54C9705374D3A6C40375E33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,6 +86,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A33B4EDCFC0A7DBA293F609639C402 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7955766E30AEECA22B7BB502A66C8A89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB071F9B772B45979C53B09F23CE9E1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,33 +119,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		48A56052D9F0CAE4B8017B2D7419E07D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E18D893A5C1E45D33A8C2960E3722DC8 /* CLXToast */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		671F5A523C7AF06A080F57E1FE721444 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				92C50F7C5FA0C824D54B1A12C7801227 /* CLXToast.modulemap */,
-				0CB504EA07C343F6C0F1EA392CBBBA21 /* CLXToast.xcconfig */,
-				019D21B92E6751C1FFFAA8C345A7AD4B /* CLXToast-dummy.m */,
-				67ACAE5D357EECA0E20D434D18BACEDA /* CLXToast-prefix.pch */,
-				DAD0718F5BBECB9604F5C79F129F0125 /* CLXToast-umbrella.h */,
-				9EE282F8DCDC4DF869E5A705EBC50BEF /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CLXToast";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				48A56052D9F0CAE4B8017B2D7419E07D /* Development Pods */,
+				B07100427A88DB5EDD36D245F1E6056A /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				42AD8E4E121FF3B9FCC1955F93E87313 /* Products */,
 				0B2AEB361EA5E58C016B8B81B8CFD9DC /* Targets Support Files */,
@@ -168,6 +146,14 @@
 			);
 			name = "Pods-CLXToast_Tests";
 			path = "Target Support Files/Pods-CLXToast_Tests";
+			sourceTree = "<group>";
+		};
+		B07100427A88DB5EDD36D245F1E6056A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC1975752A7AC53C5357AC4818E3088F /* CLXToast */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -196,6 +182,20 @@
 			path = "Target Support Files/Pods-CLXToast_Example";
 			sourceTree = "<group>";
 		};
+		CC1975752A7AC53C5357AC4818E3088F /* CLXToast */ = {
+			isa = PBXGroup;
+			children = (
+				CC78F9F71291CF99B7188046DD42E257 /* Content.swift */,
+				90947F4203D7E01B90AFD0304C73225D /* DefaultHud.swift */,
+				4CBC56A3C3EEFB48AC936EBB2811F92F /* DefaultWaiting.swift */,
+				3107AC953F503BE6EDB38E4937ACA439 /* Toast.swift */,
+				F4075BE2F3504041130C1E1F239F1544 /* ToastOperation.swift */,
+				E120B5760CC6E25952190F19B0B1F459 /* Support Files */,
+			);
+			name = CLXToast;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,23 +204,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E18D893A5C1E45D33A8C2960E3722DC8 /* CLXToast */ = {
+		E120B5760CC6E25952190F19B0B1F459 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				38A49632F891C1C39BE50FB5C05FCB96 /* Toast.swift */,
-				7212C29320195C8D00EDAC6B /* Content.swift */,
-				7212C2952019C41000EDAC6B /* DefaultHud.swift */,
-				7212C2972019C43E00EDAC6B /* DefaultWaiting.swift */,
-				E7D0512122764052CE39CF6BB960F498 /* ToastOperation.swift */,
-				671F5A523C7AF06A080F57E1FE721444 /* Support Files */,
+				3590EECCB1F71D0245E6A603F2B35781 /* CLXToast.modulemap */,
+				70C9B94CA08486E9C1E0ACF6D51BE9F6 /* CLXToast.xcconfig */,
+				74B78CC8ECC51EAF704166FCFC702A96 /* CLXToast-dummy.m */,
+				DC6E53CA865CF426F77EE7F4AB9583B7 /* CLXToast-prefix.pch */,
+				839742342E43D6DBC9BE22D23591B98D /* CLXToast-umbrella.h */,
+				1AE2A29744CBCA7CB01707EC0E28D2FF /* Info.plist */,
 			);
-			name = CLXToast;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CLXToast";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5B0B0A856D1967D153C04D188C3A78A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F254B003FC5859A191399F46AD1E6ABF /* CLXToast-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7CBC7BEC989C93BC2E87CB3E8D83644D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,14 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD15CB4ADC5041B512D16C5604F35B9C /* Pods-CLXToast_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CCEED18E10444D254FCCB33A3212AAE5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94EA3EAA87C1EAE4E8206909A7DF27F3 /* CLXToast-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,13 +265,13 @@
 			productReference = E146F3311138A24CE4EA0805E0AE4E27 /* Pods_CLXToast_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C2D4FF72DE7C326A1306E8FF7DDA25DE /* CLXToast */ = {
+		4B24D52A01ED3D558DA6BE60ED333A75 /* CLXToast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E4366FC973BEEADF46DA68DB46197F8 /* Build configuration list for PBXNativeTarget "CLXToast" */;
+			buildConfigurationList = FBA60417131CEE769CDC8C349031DAC9 /* Build configuration list for PBXNativeTarget "CLXToast" */;
 			buildPhases = (
-				24B28353F302154F75A8A6FE27F46956 /* Sources */,
-				08EA4D51C579F5C5C67C61C0BB32B240 /* Frameworks */,
-				CCEED18E10444D254FCCB33A3212AAE5 /* Headers */,
+				8FF4F65A612BB571045157C6205E67CD /* Sources */,
+				7955766E30AEECA22B7BB502A66C8A89 /* Frameworks */,
+				5B0B0A856D1967D153C04D188C3A78A7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -321,7 +321,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2D4FF72DE7C326A1306E8FF7DDA25DE /* CLXToast */,
+				4B24D52A01ED3D558DA6BE60ED333A75 /* CLXToast */,
 				E14335F9063BE20D76D029AE5D1E94C3 /* Pods-CLXToast_Example */,
 				2C39F33A974D7482ABB375F0F0ECC38A /* Pods-CLXToast_Tests */,
 			);
@@ -329,24 +329,24 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		24B28353F302154F75A8A6FE27F46956 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F43C32F6CBF5BE0B8AB69A845DDDEED /* CLXToast-dummy.m in Sources */,
-				65F6843003741F538B8C6AFDD835EC24 /* Toast.swift in Sources */,
-				7212C2962019C41000EDAC6B /* DefaultHud.swift in Sources */,
-				C9D4FCDE70AA3B2E8A7A378132BEACA3 /* ToastOperation.swift in Sources */,
-				7212C29420195C8D00EDAC6B /* Content.swift in Sources */,
-				7212C2982019C43E00EDAC6B /* DefaultWaiting.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		527CE15CD6FCDC2DB7D74FBC851FA175 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FB19C455FE31D2FA5C3C6286A22729B5 /* Pods-CLXToast_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF4F65A612BB571045157C6205E67CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4115DD1D44404387AA734E515E3C611 /* CLXToast-dummy.m in Sources */,
+				A34047D75644DAD93D4151F18AD711AA /* Content.swift in Sources */,
+				8A82E4172F140A43CC03C175AC52FAB7 /* DefaultHud.swift in Sources */,
+				D62C7FDB32ED650AF6CDA918888F046E /* DefaultWaiting.swift in Sources */,
+				8BF827A976198E73958A0B6E08BEB3D4 /* Toast.swift in Sources */,
+				136138416D8061CF93617852AC3F9909 /* ToastOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +364,7 @@
 		BA6EF0772D313C832A5542A068502E67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CLXToast;
-			target = C2D4FF72DE7C326A1306E8FF7DDA25DE /* CLXToast */;
+			target = 4B24D52A01ED3D558DA6BE60ED333A75 /* CLXToast */;
 			targetProxy = 4B3F97CF86C0D6E327996ABC365CC143 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -450,6 +450,41 @@
 			};
 			name = Release;
 		};
+		35E2E0C1C8362B23EED8F2E585627D69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70C9B94CA08486E9C1E0ACF6D51BE9F6 /* CLXToast.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CLXToast/CLXToast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CLXToast/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CLXToast/CLXToast.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CLXToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		477A423A9222F1589894177F374EB2DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40AFFB0EA2F379E5F1995EE1E07517B8 /* Pods-CLXToast_Example.debug.xcconfig */;
@@ -525,42 +560,6 @@
 			};
 			name = Debug;
 		};
-		6A7B4ACF1CD79C519FDE52A93E503EF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CB504EA07C343F6C0F1EA392CBBBA21 /* CLXToast.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CLXToast/CLXToast-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CLXToast/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CLXToast/CLXToast.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				NEW_SETTING = "";
-				PRODUCT_NAME = CLXToast;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEVELOP";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		B9BA8A838A930AB5B9AFFA44255E203C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE03A7B07379C973E99FC98AB621F01E /* Pods-CLXToast_Example.release.xcconfig */;
@@ -593,42 +592,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EED026D0BF9A507F013A6DC030975DCA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CB504EA07C343F6C0F1EA392CBBBA21 /* CLXToast.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CLXToast/CLXToast-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CLXToast/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CLXToast/CLXToast.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				NEW_SETTING = "";
-				PRODUCT_NAME = CLXToast;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -684,6 +647,41 @@
 			};
 			name = Debug;
 		};
+		FE22F493DAE00F1D5ACCD53F060C1935 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70C9B94CA08486E9C1E0ACF6D51BE9F6 /* CLXToast.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CLXToast/CLXToast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CLXToast/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CLXToast/CLXToast.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CLXToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -692,15 +690,6 @@
 			buildConfigurations = (
 				EED546DBB23FC32035C9BDC4E22B30BD /* Debug */,
 				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E4366FC973BEEADF46DA68DB46197F8 /* Build configuration list for PBXNativeTarget "CLXToast" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6A7B4ACF1CD79C519FDE52A93E503EF7 /* Debug */,
-				EED026D0BF9A507F013A6DC030975DCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -719,6 +708,15 @@
 			buildConfigurations = (
 				59BAE8ABE999A75AE39DB9CD4C1E28E7 /* Debug */,
 				0D9DC77B72B868F0AB8B53DA580DE2CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBA60417131CEE769CDC8C349031DAC9 /* Build configuration list for PBXNativeTarget "CLXToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35E2E0C1C8362B23EED8F2E585627D69 /* Debug */,
+				FE22F493DAE00F1D5ACCD53F060C1935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
