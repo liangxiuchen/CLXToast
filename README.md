@@ -66,7 +66,7 @@ let toast = Toast()
 toast.custom(content: customHud).show()
 
 //cancel demo
-Toast.hud.title("i will cancel all, which are appear after me").show(animated: true) {
+Toast.hud.title("i will cancel all.").show(animated: true) {
   Toast.cancelAll()
 }
 Toast.hud.title("i will never appear").show()
