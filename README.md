@@ -7,7 +7,7 @@
 
 ## Overview
 
-<img width = "300" height = "500" src="https://github.com/liangxiuchen/CLXToast/blob/master/DocumentAssets/Hud.gif" /> <img width = "300" height = "500" src="https://github.com/liangxiuchen/CLXToast/blob/master/DocumentAssets/waiting.gif" />
+<img width = "300" height = "500" src="https://github.com/liangxiuchen/CLXToast/blob/master/DocumentAssets/ToastDemo.gif" />
 
 ## Example
 

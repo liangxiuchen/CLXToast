@@ -38,25 +38,25 @@
 		0471E7BF591D2DD140A8934E846A7348 /* Pods-CLXToast_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLXToast_Tests-umbrella.h"; sourceTree = "<group>"; };
 		156BA82FD805F04DD7E1D7029A75132B /* Pods-CLXToast_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLXToast_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1AE2A29744CBCA7CB01707EC0E28D2FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C08899341B0F4CE509604EE8D4B59E8 /* Pods-CLXToast_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CLXToast_Example.modulemap"; sourceTree = "<group>"; };
-		1DEFD35B4A271386593E8606CBAA319E /* Pods_CLXToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLXToast_Example.framework; path = "Pods-CLXToast_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C08899341B0F4CE509604EE8D4B59E8 /* Pods-CLXToast_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CLXToast_Example.modulemap"; sourceTree = "<group>"; };
+		1DEFD35B4A271386593E8606CBAA319E /* Pods_CLXToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AA1548B460E766B6935CE658579C71 /* Pods-CLXToast_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLXToast_Example-umbrella.h"; sourceTree = "<group>"; };
 		3107AC953F503BE6EDB38E4937ACA439 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = CLXToast/Classes/Toast.swift; sourceTree = "<group>"; };
-		33CE55E4771A6D36F3DE6F49C3250703 /* CLXToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CLXToast.framework; path = CLXToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3590EECCB1F71D0245E6A603F2B35781 /* CLXToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CLXToast.modulemap; sourceTree = "<group>"; };
+		33CE55E4771A6D36F3DE6F49C3250703 /* CLXToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLXToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3590EECCB1F71D0245E6A603F2B35781 /* CLXToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CLXToast.modulemap; sourceTree = "<group>"; };
 		36D751DEE6D8F057DF65FD64AF498D5D /* Pods-CLXToast_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLXToast_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		40AFFB0EA2F379E5F1995EE1E07517B8 /* Pods-CLXToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4CBC56A3C3EEFB48AC936EBB2811F92F /* DefaultWaiting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultWaiting.swift; path = CLXToast/Classes/DefaultWaiting.swift; sourceTree = "<group>"; };
 		5E31768DB620C7D61BD27B8CFA99612C /* Pods-CLXToast_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6236CD7F62C2AB6DCD7205FD07F05E00 /* Pods-CLXToast_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLXToast_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6A2EDBAAB7963510E25FDDB69C27B8F6 /* Pods-CLXToast_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CLXToast_Tests.modulemap"; sourceTree = "<group>"; };
+		6A2EDBAAB7963510E25FDDB69C27B8F6 /* Pods-CLXToast_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CLXToast_Tests.modulemap"; sourceTree = "<group>"; };
 		70C9B94CA08486E9C1E0ACF6D51BE9F6 /* CLXToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLXToast.xcconfig; sourceTree = "<group>"; };
 		74B78CC8ECC51EAF704166FCFC702A96 /* CLXToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CLXToast-dummy.m"; sourceTree = "<group>"; };
 		839742342E43D6DBC9BE22D23591B98D /* CLXToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLXToast-umbrella.h"; sourceTree = "<group>"; };
 		90947F4203D7E01B90AFD0304C73225D /* DefaultHud.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultHud.swift; path = CLXToast/Classes/DefaultHud.swift; sourceTree = "<group>"; };
 		90A3236C44A7F39D60C0AA49744B1EB4 /* Pods-CLXToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99E036CAF8C57058C70194018F423ED8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D30E2A85F9EC69A640DC2214FD9504 /* Pods-CLXToast_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Example-resources.sh"; sourceTree = "<group>"; };
 		B7AF6F05E61E09F5381AFD2CA81993F3 /* Pods-CLXToast_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLXToast_Example-dummy.m"; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		DA201EC1F8F9EBE668376B7D8F90FCCA /* Pods-CLXToast_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLXToast_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DC1C93AE71AD6C7DE58186C3CD585818 /* Pods-CLXToast_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		DC6E53CA865CF426F77EE7F4AB9583B7 /* CLXToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLXToast-prefix.pch"; sourceTree = "<group>"; };
-		E146F3311138A24CE4EA0805E0AE4E27 /* Pods_CLXToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLXToast_Tests.framework; path = "Pods-CLXToast_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E146F3311138A24CE4EA0805E0AE4E27 /* Pods_CLXToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B2B98544CF7ACA6336C18BE12CB0ED /* Pods-CLXToast_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLXToast_Tests-dummy.m"; sourceTree = "<group>"; };
 		F4075BE2F3504041130C1E1F239F1544 /* ToastOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastOperation.swift; path = CLXToast/Classes/ToastOperation.swift; sourceTree = "<group>"; };
 		FE03A7B07379C973E99FC98AB621F01E /* Pods-CLXToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -416,7 +416,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -424,14 +426,20 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -445,6 +453,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -608,7 +617,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -616,15 +627,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",

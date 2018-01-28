@@ -1,5 +1,6 @@
 import UIKit
 import XCTest
+@testable
 import CLXToast
 
 class Tests: XCTestCase {

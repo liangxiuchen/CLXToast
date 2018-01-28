@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liangxiu.chen.cn. All rights reserved.
 //
 
-import UIKit
+import UIKit.UIView
 
 public protocol Toastable: AnyObject {
 
@@ -160,13 +160,9 @@ extension Toast {
 
     @discardableResult
     public func show(in container: UIView, with layout: ((Toast) -> Void)?, animated: Bool, completion: (() -> Void)?) -> Toast {
-        defer {
-            self.circleRef = nil //手动破解循环引用
-        }
-        guard myTransaction == nil else {
-            //不允许重复调用
-            return self;
-        }
+        defer {  self.circleRef = nil } //手动破解循环引用
+        guard myTransaction == nil else { return self }//不允许重复调用
+
         /* hud提示,自动做消失 */
         if content.style == .hud || content.style == .custom_hud {
             if isConcurrent {
@@ -250,7 +246,7 @@ extension Toast {
 
     func showOperation(with layout: ((Toast) -> Void)?, animated:Bool, in container: UIView) -> ToastOperation {
         return ToastOperation(style: .show) { (operation) in
-            self.addSelfToContainer(container: container)
+            self.addToast(to: container)
             self.content.addSubviews(to: self.contentView)
             self.content.layoutSubviews(in: self.contentView)
             
@@ -260,7 +256,7 @@ extension Toast {
             if let customLayout = layout {
                 customLayout(self)
             } else {
-                self.layoutSelfInContainer(container: container)
+                self.layoutToast(in: container)
             }
             /* 显示动画 */
             if animated {
@@ -280,7 +276,7 @@ extension Toast {
 
 //MARK: 根据Style添加默认的子视图
 extension Toast {
-    func addSelfToContainer(container: UIView) {
+    func addToast(to container: UIView) {
         container.addSubview(self)
     }
 
@@ -291,14 +287,10 @@ extension Toast {
 
 //MARK: 布局模块
 extension Toast {
-    /* Toast布局再父view,默认实现为居中 */
-    func layoutSelfInContainer(container: UIView) {
-        if content.style == .waiting || content.style == .custom_waiting {
-            //模态
-            self.frame = container.bounds
-            self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        } else {
-            //非模态
+    /* Toast布局在父view,默认实现为居中 */
+    func layoutToast(in container: UIView) {
+        //非模态
+        func layoutHudToast() {
             self.translatesAutoresizingMaskIntoConstraints = false;
             if !self.frame.equalTo(.zero) {
                 self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -317,20 +309,31 @@ extension Toast {
                 self.addConstraints([h,w])
             }
         }
+        //模态
+        func layoutWaitingToast() {
+            self.frame = container.bounds
+            self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        }
+
+        if content.style == .waiting || content.style == .custom_waiting {
+            layoutWaitingToast()
+        } else {
+            layoutHudToast()
+        }
     }
 
     /* conetentView 默认和Toast一样大小，waiting 模式下例外 */
     func layoutContentView() {
-        self.contentView.translatesAutoresizingMaskIntoConstraints = false
-        if content.style != .waiting && content.style != .custom_waiting {
-            //非模态形式
+        //非模态形式
+        func layoutHudContentView() {
             let leading = NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0);
             let trailing = NSLayoutConstraint(item: contentView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0);
             let top = NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0);
             let bottom = NSLayoutConstraint(item:contentView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
             self.addConstraints([leading, top, bottom, trailing])
-        } else {
-            //模态形式
+        }
+        //模态形式
+        func layoutWaitingContentView() {
             if !contentView.frame.equalTo(.zero) {
                 //frame不为空，不用进行自动布局,采用autoresizing
                 contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -347,6 +350,13 @@ extension Toast {
             let w = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: max(size.width, contentView.bounds.size.width))
             let h = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: max(size.height, contentView.bounds.size.height))
             self.addConstraints([h,w])
+        }
+
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+        if content.style == .hud && content.style == .custom_hud {
+            layoutHudContentView()
+        } else {
+            layoutWaitingContentView()
         }
     }
 }

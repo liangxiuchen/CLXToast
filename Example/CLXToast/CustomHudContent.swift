@@ -15,9 +15,11 @@ class CustomHudContent: ToastContent {
         super.init(style: .custom_hud)
         UINib(nibName: "CustomHud", bundle: nil).instantiate(withOwner: self, options: nil);
     }
+
     override func addSubviews(to contentView: UIView) {
         contentView.addSubview(customView)
     }
+    
     override func layoutSubviews(in contentView: UIView) {
         customView.translatesAutoresizingMaskIntoConstraints = false
         let leading = NSLayoutConstraint(item: customView, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 0);
