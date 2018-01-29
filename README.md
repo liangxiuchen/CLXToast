@@ -22,7 +22,7 @@ it, simply add the following line to your Podfile:
 pod 'CLXToast'
 ```
 
-### Usage 0.2.0
+### Usage After 0.2.0
 
 ```swift
 //----------------------------------HUD Style--------------------------------------------
