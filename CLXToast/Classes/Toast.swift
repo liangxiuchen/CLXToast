@@ -106,11 +106,13 @@ public final class Toast: UIView, Toastable {
 extension Toast {
     static let animations: OperationQueue = {
         let q = OperationQueue()
+        q.name = "CLXToast.AnimationTask.Queue"
         q.underlyingQueue = DispatchQueue.main
         return q
     }()
     static let transactions: OperationQueue = {
         let q = OperationQueue()
+        q.name = "CLXToast.Transactions.Queue"
         q.underlyingQueue = DispatchQueue.main
         return q
     }()
