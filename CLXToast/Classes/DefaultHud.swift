@@ -81,16 +81,19 @@ final class DefaultHud: ToastContent, DefaultHudExport {
 
     override func addSubviews(to contentView: UIView) {
         if let icon = _iconView, icon.superview == nil {
+            _iconView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
             contentView.addSubview(icon)
         }
 
         var empty = _titleLabel?.text?.isEmpty ?? true
         if !empty && _titleLabel.superview != contentView {
+            _titleLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
             contentView.addSubview(_titleLabel)
         }
 
         empty = _subtitleLabel?.text?.isEmpty ?? true
         if !empty && _subtitleLabel.superview != contentView {
+            _subtitleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
             contentView.addSubview(_subtitleLabel)
         }
     }

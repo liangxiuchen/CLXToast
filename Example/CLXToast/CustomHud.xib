@@ -43,7 +43,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="eLB-ad-XPb" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="RON-mi-CB9"/>
                 <constraint firstItem="eLB-ad-XPb" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="WAd-Wz-nlk"/>

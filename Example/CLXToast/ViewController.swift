@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showWaitingDemo(_ sender: UIButton) {
-        let allItemWaiting = Toast.waiting.prompt("同步中...").show()
+        let allItemWaiting = Toast.waiting.prompt("同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...").show()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             allItemWaiting.dismiss()
         }

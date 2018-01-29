@@ -326,9 +326,9 @@ extension Toast {
     func layoutContentView() {
         //非模态形式
         func layoutHudContentView() {
-            let leading = NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0);
-            let trailing = NSLayoutConstraint(item: contentView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0);
-            let top = NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0);
+            let leading = NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0)
+            let trailing = NSLayoutConstraint(item: contentView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0)
+            let top = NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
             let bottom = NSLayoutConstraint(item:contentView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
             self.addConstraints([leading, top, bottom, trailing])
         }
@@ -339,21 +339,24 @@ extension Toast {
                 contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                 return
             }
+
             let centerX = NSLayoutConstraint(item: contentView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
             let centerY = NSLayoutConstraint(item: contentView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
+
             self.addConstraints([centerX, centerY])
+
 
             var size = contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize);
             //默认大小为20
             size.width = size.width > 0 ? size.width : 20
             size.height = size.height > 0 ? size.height : 20
-            let w = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: max(size.width, contentView.bounds.size.width))
+            let w = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: min(size.width, UIScreen.main.bounds.size.width))
             let h = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: max(size.height, contentView.bounds.size.height))
             self.addConstraints([h,w])
         }
 
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
-        if content.style == .hud && content.style == .custom_hud {
+        if content.style == .hud || content.style == .custom_hud {
             layoutHudContentView()
         } else {
             layoutWaitingContentView()
