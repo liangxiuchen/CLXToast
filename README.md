@@ -67,9 +67,9 @@ toast.custom(content: customHud).show()
 
 //cancel demo
 Toast.hud.title("i will cancel all.").show(animated: true) {
+  Toast.hud.title("i will never appear").show()
   Toast.cancelAll()
 }
-Toast.hud.title("i will never appear").show()
 
 //----------------------------------Waiting Style--------------------------------------------
 
