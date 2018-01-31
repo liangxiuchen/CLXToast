@@ -129,6 +129,13 @@ class ToastOperation: Operation {
         }
         state = .executing
         task(self);
+        self.removeAllDependencies()
+    }
+
+    fileprivate func removeAllDependencies() {
+        for op in dependencies {
+            self.removeDependency(op)
+        }
     }
 
     func finish() {

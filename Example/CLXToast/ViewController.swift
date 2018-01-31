@@ -56,13 +56,12 @@ class ViewController: UIViewController {
             Toast.hud.title("i will never appear").show()
             Toast.cancelAll()
         }
-
     }
 
     @IBAction func showWaitingDemo(_ sender: UIButton) {
-        let allItemWaiting = Toast.waiting.prompt("同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...").show()
+        let waiting = Toast.waiting.prompt("同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...").show()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            allItemWaiting.dismiss()
+            waiting.dismiss()
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
