@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CLXToast'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'CLXToast is a light weight lib'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-CLXToast is a light weight lib, but it can be satisfy all kind of scene
+fix custom Operation Dependence lead to lazy release issue.
                        DESC
 
   s.homepage         = 'https://github.com/liangxiuchen/CLXToast.git'
