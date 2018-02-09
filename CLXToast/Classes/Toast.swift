@@ -71,7 +71,7 @@ public final class Toast: UIView, Toastable {
 
     public var aHud: DefaultHudExport {
         let aHud = DefaultHud()
-        aHud.delegate = self
+        aHud.toast = self
         circleRef = self
         content = aHud
         return aHud as DefaultHudExport
@@ -79,11 +79,16 @@ public final class Toast: UIView, Toastable {
 
     public var aWaiting: DefaultWaitingExport {
         let aWaiting = DefaultWating()
-        aWaiting.delegate = self
+        aWaiting.toast = self
         circleRef = self
         content = aWaiting
         return aWaiting
     }
+
+    private var contentViewWidth: NSLayoutConstraint?
+    private var contentViewHeight: NSLayoutConstraint?
+    private var toastWidth: NSLayoutConstraint?
+    private var toastHeight: NSLayoutConstraint?
 
     @discardableResult
     public func custom<T: ToastContent>(content: T) -> Toast {
@@ -93,6 +98,23 @@ public final class Toast: UIView, Toastable {
 
     public func cancel() {
         myTransaction?.cancel()
+    }
+
+    public override func updateConstraints() {
+        super.updateConstraints();
+        var size = contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize);
+        //默认大小为20
+        size.width = size.width > 0 ? size.width : 20
+        size.height = size.height > 0 ? size.height : 20
+        size.width = min(size.width, UIScreen.main.bounds.size.width)
+        if let contentView_w = self.contentViewWidth, let contentView_h = self.contentViewHeight {
+            contentView_w.constant = size.width
+            contentView_h.constant = size.height
+        }
+        if let toast_w = self.toastWidth, let toast_h = self.toastHeight {
+            toast_w.constant = size.width
+            toast_h.constant = size.height
+        }
     }
     
     #if DEVELOP
@@ -120,7 +142,7 @@ extension Toast {
     public static var hud: DefaultHudExport {
         let toast = Toast()
         let aHud = DefaultHud()
-        aHud.delegate = toast
+        aHud.toast = toast
         toast.circleRef = toast
         toast.content = aHud
         return aHud as DefaultHudExport
@@ -129,7 +151,7 @@ extension Toast {
     public static var waiting: DefaultWaitingExport {
         let toast = Toast()
         let aWaiting = DefaultWating()
-        aWaiting.delegate = toast
+        aWaiting.toast = toast
         toast.circleRef = toast
         toast.content = aWaiting
         return aWaiting
@@ -301,14 +323,14 @@ extension Toast {
                 let centerY = NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: container, attribute: .centerY, multiplier: 1, constant: 0)
                 container.addConstraints([centerX, centerY])
 
-                var size = self.systemLayoutSizeFitting(UILayoutFittingCompressedSize);
+                var size = contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize);
                 //默认大小为20
                 size.width = size.width > 0 ? size.width : 20
                 size.height = size.height > 0 ? size.height : 20
                 size.width = min(size.width, container.bounds.size.width)
-                let w = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.width)
-                let h = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.height)
-                self.addConstraints([h,w])
+                self.toastWidth = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.width)
+                self.toastHeight = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: size.height)
+                self.addConstraints([self.toastWidth!, self.toastHeight!])
             }
         }
         //模态
@@ -352,9 +374,9 @@ extension Toast {
             //默认大小为20
             size.width = size.width > 0 ? size.width : 20
             size.height = size.height > 0 ? size.height : 20
-            let w = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: min(size.width, UIScreen.main.bounds.size.width))
-            let h = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: max(size.height, contentView.bounds.size.height))
-            self.addConstraints([h,w])
+            self.contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: min(size.width, UIScreen.main.bounds.size.width))
+            self.contentViewHeight = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: max(size.height, contentView.bounds.size.height))
+            self.addConstraints([self.contentViewWidth!,self.contentViewHeight!])
         }
 
         self.contentView.translatesAutoresizingMaskIntoConstraints = false

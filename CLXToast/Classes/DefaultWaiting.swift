@@ -9,15 +9,15 @@ import Foundation
 
 final class DefaultWating: ToastContent, DefaultWaitingExport {
 
-    weak var delegate: Toast! //为了链式语法，直接一步到位show出来
+    weak var toast: Toast! //为了链式语法，直接一步到位show出来
 
     @discardableResult
     public func show(in container: UIView, with layout: ((Toast) -> Void)?, animated: Bool, completion: (() -> Void)?) -> Toast {
-        return self.delegate!.show(in: container, with: layout, animated: animated, completion: completion);
+        return self.toast!.show(in: container, with: layout, animated: animated, completion: completion);
     }
     @discardableResult
     public func show(animated: Bool = true, with completion: (() -> Void)? = nil) -> Toast {
-        return self.delegate!.show(animated: animated, with: completion)
+        return self.toast!.show(animated: animated, with: completion)
     }
 
 
@@ -41,6 +41,11 @@ final class DefaultWating: ToastContent, DefaultWaitingExport {
             _promptLabel = UILabel()
         }
         _promptLabel!.text = newValue
+        if let toast = self.toast,let transaction = toast.myTransaction {
+            if transaction.isExecuting {
+                self.toast.setNeedsUpdateConstraints()
+            }
+        }
         return self
     }
 
