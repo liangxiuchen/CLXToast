@@ -62,6 +62,10 @@ final class DefaultWating: ToastContent, DefaultWaitingExport {
         return self
     }
 
+    init() {
+        super.init(style: .waiting)
+    }
+
     override func addSubviews(to contentView: UIView) {
         if _activity == nil {
             _activity = UIActivityIndicatorView()
@@ -76,10 +80,6 @@ final class DefaultWating: ToastContent, DefaultWaitingExport {
         if !empty && _promptLabel?.superview != contentView {
             contentView.addSubview(_promptLabel!)
         }
-    }
-
-    init() {
-        super.init(style: .waiting)
     }
 
     override func layoutSubviews(in contentView: UIView) {

@@ -170,7 +170,7 @@ extension Toast {
             guard let keyWindow = UIApplication.shared.keyWindow else {
                 return
             }
-            self.show(in: keyWindow, with: nil, animated: true, completion: completion)
+            self.show(in: keyWindow, with: nil, animated: animated, completion: completion)
         }
         if Thread.isMainThread {
             showInKeyWindow()

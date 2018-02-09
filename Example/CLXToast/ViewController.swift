@@ -56,6 +56,7 @@ class ViewController: UIViewController {
             Toast.hud.title("i will never appear").show()
             Toast.cancelAll()
         }
+
     }
 
     @IBAction func showWaitingDemo(_ sender: UIButton) {
