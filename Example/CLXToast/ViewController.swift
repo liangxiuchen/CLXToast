@@ -12,15 +12,15 @@ import CLXToast
 class ViewController: UIViewController {
 
     @IBAction func showHudDemo(_ sender: UIButton) {
-        Toast.hud.title("it is a title").show()
-        Toast.hud.subtitle("it is a subtitle").show()
-        Toast.hud.icon(#imageLiteral(resourceName: "toast")).show()
-        Toast.hud.title("it is a title").subtitle("it is a subtitle").show()
-        Toast.hud.title("it is a long long long long long long long title").subtitle("it is a long long long long long long long long long long long long subtitle").icon(#imageLiteral(resourceName: "toast")).show()
+        Toast.hudBuilder.title("it is a title").show()
+        Toast.hudBuilder.subtitle("it is a subtitle").show()
+        Toast.hudBuilder.icon(#imageLiteral(resourceName: "toast")).show()
+        Toast.hudBuilder.title("it is a title").subtitle("it is a subtitle").show()
+        Toast.hudBuilder.title("it is a long long long long long long long title").subtitle("it is a long long long long long long long long long long long long subtitle").icon(#imageLiteral(resourceName: "toast")).show()
 
         //adjust titles space demo
-        Toast.hud.title("adjust space").subtitle("adjust space between title and subtitle").interTitlesSpacing(10).show()
-        Toast.hud.title("adjust space").subtitle("adjust space between titles and icon").icon(#imageLiteral(resourceName: "toast")).interTitlesIconSpacing(10).show()
+        Toast.hudBuilder.title("adjust space").subtitle("adjust space between title and subtitle").interTitlesSpacing(10).show()
+        Toast.hudBuilder.title("adjust space").subtitle("adjust space between titles and icon").icon(#imageLiteral(resourceName: "toast")).interTitlesIconSpacing(10).show()
 
         //custom subtitle Lable same as title and icon demo
         let subtitle = UILabel()
@@ -33,10 +33,10 @@ class ViewController: UIViewController {
         title.numberOfLines = 0
         title.font = UIFont.systemFont(ofSize: 16)
         title.textColor = UIColor.green
-        Toast.hud.titleLabel(title).subtitleLabel(subtitle).icon(#imageLiteral(resourceName: "toast")).show()
+        Toast.hudBuilder.titleLabel(title).subtitleLabel(subtitle).icon(#imageLiteral(resourceName: "toast")).show()
 
         //completion callback demo
-        Toast.hud.title("it is a completion callback test").show(animated: true) {
+        Toast.hudBuilder.title("it is a completion callback test").show(animated: true) {
             print("--------------------hud is finished--------------------")
         }
 
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         let tst = Toast()
         tst.isConcurrent = true
         tst.contentView.backgroundColor = UIColor.green
-        tst.aHud.title("it is a concurrent toast").show()
+        tst.aHudBuilder.title("it is a concurrent toast").show()
 
         // full custom hud Demo
         let customHud = CustomHudContent()
@@ -52,25 +52,25 @@ class ViewController: UIViewController {
         toast.custom(content: customHud).show()
 
         //cancel demo
-        Toast.hud.title("i will cancel all").show(animated: true) {
-            Toast.hud.title("i will never appear").show()
+        Toast.hudBuilder.title("i will cancel all").show(animated: true) {
+            Toast.hudBuilder.title("i will never appear").show()
             Toast.cancelAll()
         }
 
     }
 
     @IBAction func showWaitingDemo(_ sender: UIButton) {
-        let waiting = Toast.waiting.prompt("同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...").show()
+        Toast.waitingBuilder.prompt("同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...同步中...").show()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            waiting.dismiss()
+            Toast.currentWaiting?.dismiss()
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
-            let waitingWithCallBack = Toast.waiting.prompt("等待完成回调...").show(animated: true) {
-                Toast.hud.title("waiting completion").show()
+            Toast.waitingBuilder.prompt("等待完成回调...").show(animated: true) {
+                Toast.hudBuilder.title("waiting completion").show()
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                waitingWithCallBack.dismiss()
+                Toast.currentWaiting?.dismiss()
             }
         }
     }
