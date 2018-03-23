@@ -7,8 +7,7 @@
 
 import Foundation
 
-final class DefaultWating: ToastContent, DefaultWaitingExport {
-
+final class DefaultWating: ToastContent, DefaultWaitingExport, DefaultCurrentWaitingExport {
     weak var toast: Toast! //为了链式语法，直接一步到位show出来
 
     @discardableResult
@@ -21,7 +20,7 @@ final class DefaultWating: ToastContent, DefaultWaitingExport {
     }
 
 
-    var contentInset: UIEdgeInsets = UIEdgeInsetsMake(4, 4, 4, 4)
+    var contentInset: UIEdgeInsets = UIEdgeInsetsMake(8, 8, 8, 8)
     @discardableResult
     public func contentInset(_ inset: UIEdgeInsets) -> DefaultWating {
         contentInset = inset
@@ -39,6 +38,7 @@ final class DefaultWating: ToastContent, DefaultWaitingExport {
     public func prompt(_ newValue: String?) -> DefaultWating {//菊花提示的链式快捷方式（waiting模式）
         if _promptLabel == nil {
             _promptLabel = UILabel()
+            _promptLabel!.font = UIFont.systemFont(ofSize: 15.0)
         }
         _promptLabel!.text = newValue
         if let toast = self.toast,let transaction = toast.myTransaction {
@@ -64,6 +64,14 @@ final class DefaultWating: ToastContent, DefaultWaitingExport {
 
     init() {
         super.init(style: .waiting)
+    }
+
+    func dismiss() {
+        self.dismiss(animated: true)
+    }
+
+    func dismiss(animated: Bool) {
+        toast.dismiss()
     }
 
     override func addSubviews(to contentView: UIView) {

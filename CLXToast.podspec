@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CLXToast'
-  s.version          = '0.2.2'
+  s.version          = '0.3.0'
   s.summary          = 'CLXToast is a light weight lib'
 
 # This description is used to generate tags and improve search results.

@@ -24,6 +24,7 @@ public protocol Toastable: AnyObject {
     func show(in container: UIView, with layout: ((Toast) -> Void)?, animated: Bool, completion: (() -> Void)?) -> Self
     @discardableResult
     func show(animated: Bool, with completion: (() -> Void)?) -> Self
+    
     func dismiss(animated:Bool)
 }
 
@@ -62,14 +63,14 @@ public final class Toast: UIView, Toastable {
 
     fileprivate(set) public var contentView: UIView = {
         let content = UIView()
-        content.layer.cornerRadius = 3.0
+        content.layer.cornerRadius = 4.0
         content.clipsToBounds = true
         content.alpha = 0
         content.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         return content
     }()
 
-    public var aHud: DefaultHudExport {
+    public var aHudBuilder: DefaultHudExport {
         let aHud = DefaultHud()
         aHud.toast = self
         circleRef = self
@@ -77,7 +78,7 @@ public final class Toast: UIView, Toastable {
         return aHud as DefaultHudExport
     }
 
-    public var aWaiting: DefaultWaitingExport {
+    public var aWaitingBuilder: DefaultWaitingExport {
         let aWaiting = DefaultWating()
         aWaiting.toast = self
         circleRef = self
@@ -139,7 +140,7 @@ extension Toast {
         return q
     }()
 
-    public static var hud: DefaultHudExport {
+    public static var hudBuilder: DefaultHudExport {
         let toast = Toast()
         let aHud = DefaultHud()
         aHud.toast = toast
@@ -148,13 +149,20 @@ extension Toast {
         return aHud as DefaultHudExport
     }
 
-    public static var waiting: DefaultWaitingExport {
+    public static var waitingBuilder: DefaultWaitingExport {
         let toast = Toast()
         let aWaiting = DefaultWating()
         aWaiting.toast = toast
         toast.circleRef = toast
         toast.content = aWaiting
         return aWaiting
+    }
+
+    static var _currentWaiting: Toast?
+    public static var currentWaiting: DefaultCurrentWaitingExport? {
+        get {
+            return _currentWaiting?.content as? DefaultCurrentWaitingExport
+        }
     }
 
     public static func cancelAll() {
@@ -232,6 +240,10 @@ extension Toast {
             }
             Toast.transactions.addOperation(transaction)
             myTransaction = transaction
+            if let current = Toast._currentWaiting {
+                current.dismiss(animated: false);
+            }
+            Toast._currentWaiting = self
         }
         return self
     }

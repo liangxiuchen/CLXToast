@@ -20,7 +20,7 @@ final class DefaultHud: ToastContent, DefaultHudExport {
         return self.toast!.show(animated: animated, with: completion)
     }
 
-    var contentInset: UIEdgeInsets = UIEdgeInsetsMake(4, 4, 4, 4)
+    var contentInset: UIEdgeInsets = UIEdgeInsetsMake(12, 12, 12, 12)
     @discardableResult
     public func contentInset(_ inset: UIEdgeInsets) -> DefaultHud {
         contentInset = inset
@@ -33,6 +33,9 @@ final class DefaultHud: ToastContent, DefaultHudExport {
         if _titleLabel == nil {
             _titleLabel = UILabel()
             _titleLabel.textColor = UIColor.white
+            _titleLabel.font = UIFont.systemFont(ofSize: 16.0)
+            _titleLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.size.width * 0.8
+            _titleLabel.numberOfLines = 0
         }
         _titleLabel.text = newValue
         return self
@@ -50,6 +53,8 @@ final class DefaultHud: ToastContent, DefaultHudExport {
         if _subtitleLabel == nil {
             _subtitleLabel = UILabel()
             _subtitleLabel.textColor = UIColor.white
+            _subtitleLabel.font = UIFont.systemFont(ofSize: 15.0)
+            _subtitleLabel.preferredMaxLayoutWidth = UIScreen.main.bounds.size.width * 0.8
             _subtitleLabel.numberOfLines = 0
         }
         _subtitleLabel.text = newValue

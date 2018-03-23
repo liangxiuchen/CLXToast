@@ -26,15 +26,15 @@ pod 'CLXToast'
 
 ```swift
 //----------------------------------HUD Style--------------------------------------------
-Toast.hud.title("it is a title").show()
-Toast.hud.subtitle("it is a subtitle").show()
-Toast.hud.icon(UIImage(named: "toast")).show()
-Toast.hud.title("it is a title").subtitle("it is a subtitle").show()
-Toast.hud.title("it is a long long long long long long long title").subtitle("it is a long long long long long long long long long long long longsubtitle").icon(#imageLiteral(resourceName: "toast")).show()
+Toast.hudBuilder.title("it is a title").show()
+Toast.hudBuilder.subtitle("it is a subtitle").show()
+Toast.hudBuilder.icon(UIImage(named: "toast")).show()
+Toast.hudBuilder.title("it is a title").subtitle("it is a subtitle").show()
+Toast.hudBuilder.title("it is a long long long long long long long title").subtitle("it is a long long long long long long long long long long long longsubtitle").icon(#imageLiteral(resourceName: "toast")).show()
 
  //adjust titles space demo
-Toast.hud.title("adjust space").subtitle("adjust space between title and subtitle").interTitlesSpacing(10).show()
-Toast.hud.title("adjust space").subtitle("adjust space between titles and icon").icon(#imageLiteral(resourceName: "toast")).interTitlesIconSpacing(10).show()
+Toast.hudBuilder.title("adjust space").subtitle("adjust space between title and subtitle").interTitlesSpacing(10).show()
+Toast.hudBuilder.title("adjust space").subtitle("adjust space between titles and icon").icon(#imageLiteral(resourceName: "toast")).interTitlesIconSpacing(10).show()
 
 //custom subtitle Lable same as title and icon demo
 let subtitle = UILabel()
@@ -47,10 +47,10 @@ title.preferredMaxLayoutWidth = 100
 title.numberOfLines = 0
 title.font = UIFont.systemFont(ofSize: 16)
 title.textColor = UIColor.green
-Toast.hud.titleLabel(title).subtitleLabel(subtitle).icon(#imageLiteral(resourceName: "toast")).show()
+Toast.hudBuilder.titleLabel(title).subtitleLabel(subtitle).icon(#imageLiteral(resourceName: "toast")).show()
 
 //completion callback demo
-Toast.hud.title("it is a completion callback test").show(animated: true) {
+Toast.hudBuilder.title("it is a completion callback test").show(animated: true) {
       print("--------------------hud is finished--------------------")
 }
 
@@ -66,8 +66,8 @@ let toast = Toast()
 toast.custom(content: customHud).show()
 
 //cancel demo
-Toast.hud.title("i will cancel all.").show(animated: true) {
-  Toast.hud.title("i will never appear").show()
+Toast.hudBuilder.title("i will cancel all.").show(animated: true) {
+  Toast.hudBuilder.title("i will never appear").show()
   Toast.cancelAll()
 }
 
@@ -80,7 +80,7 @@ DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
 
 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
     let waitingWithCallBack = Toast.waiting.prompt("等待完成回调...").show(animated: true) {
-        Toast.hud.title("waiting completion").show()
+        Toast.hudBuilder.title("waiting completion").show()
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             waitingWithCallBack.dismiss()
