@@ -39,6 +39,8 @@ final class DefaultWating: ToastContent, DefaultWaitingExport, DefaultCurrentWai
         if _promptLabel == nil {
             _promptLabel = UILabel()
             _promptLabel!.font = UIFont.systemFont(ofSize: 15.0)
+            _promptLabel!.preferredMaxLayoutWidth = UIScreen.main.bounds.width * 0.8
+            _promptLabel!.numberOfLines = 0
         }
         _promptLabel!.text = newValue
         if let toast = self.toast,let transaction = toast.myTransaction {
@@ -93,40 +95,37 @@ final class DefaultWating: ToastContent, DefaultWaitingExport, DefaultCurrentWai
     override func layoutSubviews(in contentView: UIView) {
         _activity.translatesAutoresizingMaskIntoConstraints = false
         let empty = _promptLabel?.text?.isEmpty ?? true
-
-        let activityCenterX = NSLayoutConstraint(item: _activity, attribute: .centerX, relatedBy: .equal, toItem: contentView, attribute: .centerX, multiplier: 1, constant: 0)
-
-        let activityCenterY = NSLayoutConstraint(item: _activity, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0)
-
-        let activityLeading = NSLayoutConstraint(item: _activity, attribute: .leading, relatedBy: .greaterThanOrEqual, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left)
-
-        let activityTop = NSLayoutConstraint(item: _activity, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top)
-
-        let activityTrailing = NSLayoutConstraint(item: _activity, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right)
-
-        var activityBottom: NSLayoutConstraint
         if empty {
-            activityBottom = NSLayoutConstraint(item: _activity, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
-            contentView.addConstraints([activityCenterX, activityCenterY, activityLeading, activityTop, activityTrailing, activityBottom])
-            //子控件布局完成
-            return
+            let activityLeading = NSLayoutConstraint(item: _activity, attribute: .leading, relatedBy:  .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left)
+
+            let activityTop = NSLayoutConstraint(item: _activity, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top)
+
+            let activityTrailing = NSLayoutConstraint(item: _activity, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right)
+
+            let activityBottom = NSLayoutConstraint(item: _activity, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
+            contentView.addConstraints([activityLeading, activityTop, activityTrailing, activityBottom])
         } else {
-            //需要布局prompt label
-            activityBottom = NSLayoutConstraint(item: _activity, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: -_space / 2.0)
-            contentView.addConstraints([activityCenterX, activityLeading, activityTop, activityTrailing, activityBottom])
+            let activityLeading = NSLayoutConstraint(item: _activity, attribute: .leading, relatedBy:  .greaterThanOrEqual, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left)
+
+            let activityTop = NSLayoutConstraint(item: _activity, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top)
+
+            let activityTrailing = NSLayoutConstraint(item: _activity, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right)
+
+            contentView.addConstraints([activityLeading, activityTop, activityTrailing])
+            //布局promptLabel
+            _promptLabel!.translatesAutoresizingMaskIntoConstraints = false
+
+            let promptLeading = NSLayoutConstraint(item: _promptLabel!, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left)
+
+            let promptTop = NSLayoutConstraint(item: _promptLabel!, attribute: .top, relatedBy: .equal, toItem: _activity, attribute: .bottom, multiplier: 1, constant:  _space / 2.0)
+
+            let promptTrailing = NSLayoutConstraint(item: _promptLabel!, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right)
+
+            let promptBottom = NSLayoutConstraint(item: _promptLabel!, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
+            contentView.addConstraints([promptLeading, promptTop, promptTrailing, promptBottom])
+
+            let activityCenterX = NSLayoutConstraint(item: _activity, attribute: .centerX, relatedBy: .equal, toItem: _promptLabel!, attribute: .centerX, multiplier: 1, constant: 0)
+            contentView.addConstraint(activityCenterX)
         }
-
-        //布局promptLabel
-        _promptLabel!.translatesAutoresizingMaskIntoConstraints = false
-        let promptCenterX = NSLayoutConstraint(item: _promptLabel!, attribute: .centerX, relatedBy: .equal, toItem: contentView, attribute: .centerX, multiplier: 1, constant: 0)
-
-        let promptLeading = NSLayoutConstraint(item: _promptLabel!, attribute: .leading, relatedBy: .greaterThanOrEqual, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left)
-
-        let promptTop = NSLayoutConstraint(item: _promptLabel!, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant:  _space / 2.0)
-
-        let promptTrailing = NSLayoutConstraint(item: _promptLabel!, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right)
-
-        let promptBottom = NSLayoutConstraint(item: _promptLabel!, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
-        contentView.addConstraints([promptCenterX, promptLeading, promptTop, promptTrailing, promptBottom])
     }
 }
