@@ -115,11 +115,11 @@ final class DefaultWating: ToastContent, DefaultWaitingExport, DefaultCurrentWai
             //布局promptLabel
             _promptLabel!.translatesAutoresizingMaskIntoConstraints = false
 
-            let promptLeading = NSLayoutConstraint(item: _promptLabel!, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left)
+            let promptLeading = NSLayoutConstraint(item: _promptLabel!, attribute: .leading, relatedBy: .greaterThanOrEqual, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left)
 
             let promptTop = NSLayoutConstraint(item: _promptLabel!, attribute: .top, relatedBy: .equal, toItem: _activity, attribute: .bottom, multiplier: 1, constant:  _space / 2.0)
 
-            let promptTrailing = NSLayoutConstraint(item: _promptLabel!, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right)
+            let promptTrailing = NSLayoutConstraint(item: _promptLabel!, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right)
 
             let promptBottom = NSLayoutConstraint(item: _promptLabel!, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
             contentView.addConstraints([promptLeading, promptTop, promptTrailing, promptBottom])
