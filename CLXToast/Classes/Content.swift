@@ -26,7 +26,7 @@ open class ToastContent: NSObject {
 
 public protocol DefaultCommonExport {
 
-    weak var toast: Toast! {get} //为了链式语法，直接一步到位show出来
+    var toast: Toast! {get} //为了链式语法，直接一步到位show出来
 
     @discardableResult
     func show(animated: Bool, with completion: (() -> Void)?) -> Toast
