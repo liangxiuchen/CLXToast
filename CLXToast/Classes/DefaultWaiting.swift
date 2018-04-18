@@ -39,6 +39,7 @@ final class DefaultWating: ToastContent, DefaultWaitingExport, DefaultCurrentWai
         if _promptLabel == nil {
             _promptLabel = UILabel()
             _promptLabel!.font = UIFont.systemFont(ofSize: 15.0)
+            _promptLabel!.textColor = UIColor.white
             _promptLabel!.preferredMaxLayoutWidth = UIScreen.main.bounds.width * 0.8
             _promptLabel!.numberOfLines = 0
         }
