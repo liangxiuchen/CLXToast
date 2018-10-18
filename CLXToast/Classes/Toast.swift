@@ -250,6 +250,11 @@ extension Toast {
 
     public func dismiss(animated:Bool = true) {
         if content.style == .custom_waiting || content.style == .waiting {
+            
+            if Toast._currentWaiting == self {
+                Toast._currentWaiting = nil;
+            }
+            
             if let executing = myTransaction?.isExecuting, executing {
                 let dismiss = self.dismissOperation(delay: 0)
                 dismiss.completionBlock = {
