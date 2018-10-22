@@ -39,4 +39,9 @@ fix custom Operation Dependence lead to lazy release issue.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
+  s.subspec 'Objc-Toast' do |ot|
+    ot.source_files = 'CLXToast/Classes/objc/**/*'
+    ot.ios.deployment_target = '8.0'
+  end
 end

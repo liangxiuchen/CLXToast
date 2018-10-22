@@ -20,6 +20,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'CLXToast'
+pod 'CLXToast/Objc-Toast'
 ```
 
 ### Usage After 0.2.0
