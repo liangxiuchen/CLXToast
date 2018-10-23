@@ -17,9 +17,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 CLXToast is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
-
+### Swift
 ```ruby
 pod 'CLXToast'
+```
+### Objective-C
+```ruby
 pod 'CLXToast/Objc-Toast'
 ```
 
