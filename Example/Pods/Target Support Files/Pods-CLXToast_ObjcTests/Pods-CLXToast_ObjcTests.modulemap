@@ -1,0 +1,6 @@
+framework module Pods_CLXToast_ObjcTests {
+  umbrella header "Pods-CLXToast_ObjcTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

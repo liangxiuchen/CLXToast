@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78C272B5836B3171E3CE772B /* Pods_CLXToast_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8E359928CE0AF5C62D994B /* Pods_CLXToast_Objc.framework */; };
+		9DA18EACC6ADE0C5791A2527 /* Pods_CLXToast_ObjcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B9FAEED5DD4DCC4624589D /* Pods_CLXToast_ObjcTests.framework */; };
+		FA92E0FD2195235F00EF6FB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA92E0FC2195235F00EF6FB8 /* AppDelegate.m */; };
+		FA92E1002195235F00EF6FB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA92E0FF2195235F00EF6FB8 /* ViewController.m */; };
+		FA92E1032195235F00EF6FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA92E1012195235F00EF6FB8 /* Main.storyboard */; };
+		FA92E1052195236000EF6FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA92E1042195236000EF6FB8 /* Assets.xcassets */; };
+		FA92E1082195236000EF6FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA92E1062195236000EF6FB8 /* LaunchScreen.storyboard */; };
+		FA92E10B2195236000EF6FB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA92E10A2195236000EF6FB8 /* main.m */; };
+		FA92E1152195236000EF6FB8 /* CLXToast_ObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA92E1142195236000EF6FB8 /* CLXToast_ObjcTests.m */; };
+		FA92E1202195236000EF6FB8 /* CLXToast_ObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA92E11F2195236000EF6FB8 /* CLXToast_ObjcUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA92E1112195236000EF6FB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA92E0F02195235F00EF6FB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA92E0F72195235F00EF6FB8;
+			remoteInfo = CLXToast_Objc;
+		};
+		FA92E11C2195236000EF6FB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA92E0F02195235F00EF6FB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA92E0F72195235F00EF6FB8;
+			remoteInfo = CLXToast_Objc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C8E359928CE0AF5C62D994B /* Pods_CLXToast_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55724F9355744E71E6031DEC /* Pods-CLXToast_ObjcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_ObjcTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CLXToast_ObjcTests/Pods-CLXToast_ObjcTests.release.xcconfig"; sourceTree = "<group>"; };
+		90E9164A47A2A99C3930A4D3 /* Pods-CLXToast_Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_Objc.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CLXToast_Objc/Pods-CLXToast_Objc.release.xcconfig"; sourceTree = "<group>"; };
+		9A545E8085AF5D08E2363A6A /* Pods-CLXToast_ObjcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_ObjcTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CLXToast_ObjcTests/Pods-CLXToast_ObjcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7B9FAEED5DD4DCC4624589D /* Pods_CLXToast_ObjcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_ObjcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED21828A011205D78FB0C04A /* Pods-CLXToast_Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_Objc.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CLXToast_Objc/Pods-CLXToast_Objc.debug.xcconfig"; sourceTree = "<group>"; };
+		FA92E0F82195235F00EF6FB8 /* CLXToast_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLXToast_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA92E0FB2195235F00EF6FB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FA92E0FC2195235F00EF6FB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FA92E0FE2195235F00EF6FB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FA92E0FF2195235F00EF6FB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FA92E1022195235F00EF6FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA92E1042195236000EF6FB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA92E1072195236000EF6FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA92E1092195236000EF6FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA92E10A2195236000EF6FB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA92E1102195236000EF6FB8 /* CLXToast_ObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLXToast_ObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA92E1142195236000EF6FB8 /* CLXToast_ObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLXToast_ObjcTests.m; sourceTree = "<group>"; };
+		FA92E1162195236000EF6FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA92E11B2195236000EF6FB8 /* CLXToast_ObjcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLXToast_ObjcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA92E11F2195236000EF6FB8 /* CLXToast_ObjcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLXToast_ObjcUITests.m; sourceTree = "<group>"; };
+		FA92E1212195236000EF6FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA92E0F52195235F00EF6FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C272B5836B3171E3CE772B /* Pods_CLXToast_Objc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA92E10D2195236000EF6FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA18EACC6ADE0C5791A2527 /* Pods_CLXToast_ObjcTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA92E1182195236000EF6FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		165825C4D4E59B867A919243 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED21828A011205D78FB0C04A /* Pods-CLXToast_Objc.debug.xcconfig */,
+				90E9164A47A2A99C3930A4D3 /* Pods-CLXToast_Objc.release.xcconfig */,
+				9A545E8085AF5D08E2363A6A /* Pods-CLXToast_ObjcTests.debug.xcconfig */,
+				55724F9355744E71E6031DEC /* Pods-CLXToast_ObjcTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		211C4943215D72AAB0089CC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C8E359928CE0AF5C62D994B /* Pods_CLXToast_Objc.framework */,
+				B7B9FAEED5DD4DCC4624589D /* Pods_CLXToast_ObjcTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA92E0EF2195235F00EF6FB8 = {
+			isa = PBXGroup;
+			children = (
+				FA92E0FA2195235F00EF6FB8 /* CLXToast_Objc */,
+				FA92E1132195236000EF6FB8 /* CLXToast_ObjcTests */,
+				FA92E11E2195236000EF6FB8 /* CLXToast_ObjcUITests */,
+				FA92E0F92195235F00EF6FB8 /* Products */,
+				165825C4D4E59B867A919243 /* Pods */,
+				211C4943215D72AAB0089CC5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA92E0F92195235F00EF6FB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA92E0F82195235F00EF6FB8 /* CLXToast_Objc.app */,
+				FA92E1102195236000EF6FB8 /* CLXToast_ObjcTests.xctest */,
+				FA92E11B2195236000EF6FB8 /* CLXToast_ObjcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA92E0FA2195235F00EF6FB8 /* CLXToast_Objc */ = {
+			isa = PBXGroup;
+			children = (
+				FA92E0FB2195235F00EF6FB8 /* AppDelegate.h */,
+				FA92E0FC2195235F00EF6FB8 /* AppDelegate.m */,
+				FA92E0FE2195235F00EF6FB8 /* ViewController.h */,
+				FA92E0FF2195235F00EF6FB8 /* ViewController.m */,
+				FA92E1012195235F00EF6FB8 /* Main.storyboard */,
+				FA92E1042195236000EF6FB8 /* Assets.xcassets */,
+				FA92E1062195236000EF6FB8 /* LaunchScreen.storyboard */,
+				FA92E1092195236000EF6FB8 /* Info.plist */,
+				FA92E10A2195236000EF6FB8 /* main.m */,
+			);
+			path = CLXToast_Objc;
+			sourceTree = "<group>";
+		};
+		FA92E1132195236000EF6FB8 /* CLXToast_ObjcTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA92E1142195236000EF6FB8 /* CLXToast_ObjcTests.m */,
+				FA92E1162195236000EF6FB8 /* Info.plist */,
+			);
+			path = CLXToast_ObjcTests;
+			sourceTree = "<group>";
+		};
+		FA92E11E2195236000EF6FB8 /* CLXToast_ObjcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA92E11F2195236000EF6FB8 /* CLXToast_ObjcUITests.m */,
+				FA92E1212195236000EF6FB8 /* Info.plist */,
+			);
+			path = CLXToast_ObjcUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA92E0F72195235F00EF6FB8 /* CLXToast_Objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA92E1242195236000EF6FB8 /* Build configuration list for PBXNativeTarget "CLXToast_Objc" */;
+			buildPhases = (
+				3ADE982FA754E9FE8EA81B52 /* [CP] Check Pods Manifest.lock */,
+				FA92E0F42195235F00EF6FB8 /* Sources */,
+				FA92E0F52195235F00EF6FB8 /* Frameworks */,
+				FA92E0F62195235F00EF6FB8 /* Resources */,
+				13EB9342413A004832CA58C0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CLXToast_Objc;
+			productName = CLXToast_Objc;
+			productReference = FA92E0F82195235F00EF6FB8 /* CLXToast_Objc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA92E10F2195236000EF6FB8 /* CLXToast_ObjcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA92E1272195236000EF6FB8 /* Build configuration list for PBXNativeTarget "CLXToast_ObjcTests" */;
+			buildPhases = (
+				766EC3AE6C97A67B2815134B /* [CP] Check Pods Manifest.lock */,
+				FA92E10C2195236000EF6FB8 /* Sources */,
+				FA92E10D2195236000EF6FB8 /* Frameworks */,
+				FA92E10E2195236000EF6FB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA92E1122195236000EF6FB8 /* PBXTargetDependency */,
+			);
+			name = CLXToast_ObjcTests;
+			productName = CLXToast_ObjcTests;
+			productReference = FA92E1102195236000EF6FB8 /* CLXToast_ObjcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA92E11A2195236000EF6FB8 /* CLXToast_ObjcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA92E12A2195236000EF6FB8 /* Build configuration list for PBXNativeTarget "CLXToast_ObjcUITests" */;
+			buildPhases = (
+				FA92E1172195236000EF6FB8 /* Sources */,
+				FA92E1182195236000EF6FB8 /* Frameworks */,
+				FA92E1192195236000EF6FB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA92E11D2195236000EF6FB8 /* PBXTargetDependency */,
+			);
+			name = CLXToast_ObjcUITests;
+			productName = CLXToast_ObjcUITests;
+			productReference = FA92E11B2195236000EF6FB8 /* CLXToast_ObjcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA92E0F02195235F00EF6FB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "carroll chen";
+				TargetAttributes = {
+					FA92E0F72195235F00EF6FB8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					FA92E10F2195236000EF6FB8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = FA92E0F72195235F00EF6FB8;
+					};
+					FA92E11A2195236000EF6FB8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = FA92E0F72195235F00EF6FB8;
+					};
+				};
+			};
+			buildConfigurationList = FA92E0F32195235F00EF6FB8 /* Build configuration list for PBXProject "CLXToast_Objc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA92E0EF2195235F00EF6FB8;
+			productRefGroup = FA92E0F92195235F00EF6FB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA92E0F72195235F00EF6FB8 /* CLXToast_Objc */,
+				FA92E10F2195236000EF6FB8 /* CLXToast_ObjcTests */,
+				FA92E11A2195236000EF6FB8 /* CLXToast_ObjcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA92E0F62195235F00EF6FB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA92E1082195236000EF6FB8 /* LaunchScreen.storyboard in Resources */,
+				FA92E1052195236000EF6FB8 /* Assets.xcassets in Resources */,
+				FA92E1032195235F00EF6FB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA92E10E2195236000EF6FB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA92E1192195236000EF6FB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13EB9342413A004832CA58C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-CLXToast_Objc/Pods-CLXToast_Objc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CLXToast-Objc-Toast/CLXToast.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CLXToast.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-CLXToast_Objc/Pods-CLXToast_Objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ADE982FA754E9FE8EA81B52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CLXToast_Objc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		766EC3AE6C97A67B2815134B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CLXToast_ObjcTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA92E0F42195235F00EF6FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA92E1002195235F00EF6FB8 /* ViewController.m in Sources */,
+				FA92E10B2195236000EF6FB8 /* main.m in Sources */,
+				FA92E0FD2195235F00EF6FB8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA92E10C2195236000EF6FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA92E1152195236000EF6FB8 /* CLXToast_ObjcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA92E1172195236000EF6FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA92E1202195236000EF6FB8 /* CLXToast_ObjcUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA92E1122195236000EF6FB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA92E0F72195235F00EF6FB8 /* CLXToast_Objc */;
+			targetProxy = FA92E1112195236000EF6FB8 /* PBXContainerItemProxy */;
+		};
+		FA92E11D2195236000EF6FB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA92E0F72195235F00EF6FB8 /* CLXToast_Objc */;
+			targetProxy = FA92E11C2195236000EF6FB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA92E1012195235F00EF6FB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA92E1022195235F00EF6FB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA92E1062195236000EF6FB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA92E1072195236000EF6FB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA92E1222195236000EF6FB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA92E1232195236000EF6FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA92E1252195236000EF6FB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED21828A011205D78FB0C04A /* Pods-CLXToast_Objc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63S6NEKCLA;
+				INFOPLIST_FILE = CLXToast_Objc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CLXToast-Objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA92E1262195236000EF6FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E9164A47A2A99C3930A4D3 /* Pods-CLXToast_Objc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63S6NEKCLA;
+				INFOPLIST_FILE = CLXToast_Objc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CLXToast-Objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA92E1282195236000EF6FB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A545E8085AF5D08E2363A6A /* Pods-CLXToast_ObjcTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63S6NEKCLA;
+				INFOPLIST_FILE = CLXToast_ObjcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CLXToast-ObjcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CLXToast_Objc.app/CLXToast_Objc";
+			};
+			name = Debug;
+		};
+		FA92E1292195236000EF6FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55724F9355744E71E6031DEC /* Pods-CLXToast_ObjcTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63S6NEKCLA;
+				INFOPLIST_FILE = CLXToast_ObjcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CLXToast-ObjcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CLXToast_Objc.app/CLXToast_Objc";
+			};
+			name = Release;
+		};
+		FA92E12B2195236000EF6FB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63S6NEKCLA;
+				INFOPLIST_FILE = CLXToast_ObjcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CLXToast-ObjcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CLXToast_Objc;
+			};
+			name = Debug;
+		};
+		FA92E12C2195236000EF6FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63S6NEKCLA;
+				INFOPLIST_FILE = CLXToast_ObjcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.CLXToast-ObjcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CLXToast_Objc;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA92E0F32195235F00EF6FB8 /* Build configuration list for PBXProject "CLXToast_Objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA92E1222195236000EF6FB8 /* Debug */,
+				FA92E1232195236000EF6FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA92E1242195236000EF6FB8 /* Build configuration list for PBXNativeTarget "CLXToast_Objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA92E1252195236000EF6FB8 /* Debug */,
+				FA92E1262195236000EF6FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA92E1272195236000EF6FB8 /* Build configuration list for PBXNativeTarget "CLXToast_ObjcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA92E1282195236000EF6FB8 /* Debug */,
+				FA92E1292195236000EF6FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA92E12A2195236000EF6FB8 /* Build configuration list for PBXNativeTarget "CLXToast_ObjcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA92E12B2195236000EF6FB8 /* Debug */,
+				FA92E12C2195236000EF6FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA92E0F02195235F00EF6FB8 /* Project object */;
+}

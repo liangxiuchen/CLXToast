@@ -1,6 +1,0 @@
-framework module Pods_CLXToast_Example {
-  umbrella header "Pods-CLXToast_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

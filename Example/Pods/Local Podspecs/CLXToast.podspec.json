@@ -1,8 +1,8 @@
 {
   "name": "CLXToast",
-  "version": "0.2.0",
+  "version": "0.3.3",
   "summary": "CLXToast is a light weight lib",
-  "description": "CLXToast is a light weight lib, but it can be satisfy all kind of scene",
+  "description": "fix custom Operation Dependence lead to lazy release issue.",
   "homepage": "https://github.com/liangxiuchen/CLXToast.git",
   "license": {
     "type": "MIT",
@@ -13,10 +13,19 @@
   },
   "source": {
     "git": "https://github.com/liangxiuchen/CLXToast.git",
-    "tag": "0.2.0"
+    "tag": "0.3.3"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "CLXToast/Classes/**/*"
+  "source_files": "CLXToast/Classes/**/*",
+  "subspecs": [
+    {
+      "name": "Objc-Toast",
+      "source_files": "CLXToast/Classes/objc/**/*",
+      "platforms": {
+        "ios": "8.0"
+      }
+    }
+  ]
 }

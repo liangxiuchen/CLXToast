@@ -1,10 +1,21 @@
 use_frameworks!
 
-target 'CLXToast_Example' do
+workspace 'CLXToast'
+#!!!!!!!!!!!!!!Swift Demo!!!!!!!!!!!!!!!!
+target 'CLXToast_Swift_Example' do
+  project 'CLXToast_Swift'
   pod 'CLXToast', :path => '../'
-  target 'CLXToast_Tests' do
+  target 'CLXToast_Swift_Tests' do
     inherit! :search_paths
-
-    
   end
 end
+#!!!!!!!!!!!!!!Objc Demo!!!!!!!!!!!!!!!!
+target 'CLXToast_Objc' do
+    project 'CLXToast_Objc/CLXToast_Objc'
+    pod 'CLXToast/Objc-Toast', :path => '../'
+    target 'CLXToast_ObjcTests' do
+        inherit! :search_paths
+    end
+end
+
+
