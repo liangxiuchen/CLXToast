@@ -20,7 +20,7 @@ class CustomHudContent: ToastContent {
         contentView.addSubview(customView)
     }
     
-    override func layoutSubviews(in contentView: UIView) {
+    override func layoutSubviews(at contentView: UIView) {
         customView.translatesAutoresizingMaskIntoConstraints = false
         let leading = NSLayoutConstraint(item: customView, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 0);
 

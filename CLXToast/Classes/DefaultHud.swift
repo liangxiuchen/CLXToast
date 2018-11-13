@@ -121,7 +121,7 @@ final class DefaultHud: ToastContent, DefaultHudExport {
         super.init(style: .hud)
     }
 
-    override func layoutSubviews(in contentView: UIView) {
+    override func layoutSubviews(at contentView: UIView) {
         let iconEmpty = _iconView?.image == nil ? true : false
         let titleEmpty = _titleLabel?.text?.isEmpty ?? true
         let subtitleEmpty = _subtitleLabel?.text?.isEmpty ?? true

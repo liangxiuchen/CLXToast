@@ -21,7 +21,7 @@ open class ToastContent: NSObject {
         self.style = style
     }
     open func addSubviews(to contentView: UIView) {}
-    open func layoutSubviews(in contentView: UIView) {}
+    open func layoutSubviews(at contentView: UIView) {}
 }
 
 public protocol DefaultCommonExport {

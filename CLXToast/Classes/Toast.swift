@@ -289,7 +289,7 @@ extension Toast {
         return ToastOperation(style: .show) { (operation) in
             self.addToast(to: container)
             self.content.addSubviews(to: self.contentView)
-            self.content.layoutSubviews(in: self.contentView)
+            self.content.layoutSubviews(at: self.contentView)
             
             self.addContentView()
             self.layoutContentView()

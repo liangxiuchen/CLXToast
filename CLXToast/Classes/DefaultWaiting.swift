@@ -93,7 +93,7 @@ final class DefaultWating: ToastContent, DefaultWaitingExport, DefaultCurrentWai
         }
     }
 
-    override func layoutSubviews(in contentView: UIView) {
+    override func layoutSubviews(at contentView: UIView) {
         _activity.translatesAutoresizingMaskIntoConstraints = false
         let empty = _promptLabel?.text?.isEmpty ?? true
         if empty {
