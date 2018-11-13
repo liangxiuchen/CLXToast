@@ -287,8 +287,9 @@ static __unsafe_unretained CLXToast *_currentWaiting = nil;
 - (CLXOperation *)showOperationWithLayout:(void (^)(CLXToast *))layout animated:(BOOL)animated at:(UIView *)container {
     return [[CLXOperation alloc] initWithTask:^(CLXOperation *operation) {
         [container addSubview:self];
-        [self.content addSubviews:self.contentView];
-        [self.content layoutSubviews:self.contentView];
+        
+        [self.content addSubviewsTo:self.contentView];
+        [self.content layoutSubviewsAt:self.contentView];
 
         [self addSubview:self.contentView];
         [self layoutContentView];

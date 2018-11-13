@@ -26,11 +26,11 @@
 }
 
 
-- (void)addSubviews:(UIView *)contentView {
+- (void)addSubviewsTo:(UIView *)contentView {
     [contentView addSubview:self.activityView];
 }
 
-- (void)layoutSubviews:(UIView *)contentView {
+- (void)layoutSubviewsAt:(UIView *)contentView {
     self.activityView.translatesAutoresizingMaskIntoConstraints = NO;
     NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:self.activityView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:contentView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
     NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:self.activityView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:contentView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];

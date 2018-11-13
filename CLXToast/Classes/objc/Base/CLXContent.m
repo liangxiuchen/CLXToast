@@ -28,9 +28,14 @@
     }
     return self;
 }
+
 //abstract methods
-- (void)addSubviews:(UIView *)contentView {}
+- (void)addSubviewsTo:(UIView *)contentView {
+    @throw [NSException exceptionWithName:@"abstract methods" reason:@"abstract methods calleds" userInfo:nil];
+}
 //abstract methods
-- (void)layoutSubviews:(UIView *)contentView {}
+- (void)layoutSubviewsAt:(UIView *)contentView {
+    @throw [NSException exceptionWithName:@"abstract methods" reason:@"abstract methods calleds" userInfo:nil];
+}
 
 @end

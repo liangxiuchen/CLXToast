@@ -85,7 +85,7 @@
 #pragma clang diagnostic pop
 
 #pragma mark -overrided methods
-- (void)addSubviews:(UIView *)contentView {
+- (void)addSubviewsTo:(UIView *)contentView {
     if (_activityIndicator == nil) {
         _activityIndicator = [UIActivityIndicatorView new];
         _activityIndicator.hidesWhenStopped = NO;
@@ -99,7 +99,7 @@
     }
 }
 
-- (void)layoutSubviews:(UIView *)contentView {
+- (void)layoutSubviewsAt:(UIView *)contentView {
     assert(_activityIndicator);
     _activityIndicator.translatesAutoresizingMaskIntoConstraints = NO;
 

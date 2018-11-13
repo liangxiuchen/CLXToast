@@ -25,7 +25,7 @@ typedef NS_ENUM(NSUInteger, ToastStyle)
 - (instancetype)initWith:(ToastStyle)style NS_DESIGNATED_INITIALIZER;
 
 #pragma subclass hook methods
-- (void)addSubviews:(UIView *)contentView;
-- (void)layoutSubviews:(UIView *)contentView;
+- (void)addSubviewsTo:(UIView *)contentView;
+- (void)layoutSubviewsAt:(UIView *)contentView;
 
 @end

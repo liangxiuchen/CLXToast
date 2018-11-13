@@ -136,7 +136,7 @@
 }
 
 #pragma mark -overrided methods
-- (void)addSubviews:(UIView *)contentView {
+- (void)addSubviewsTo:(UIView *)contentView {
     if (_iconView != nil && _iconView.superview == contentView) {
         [_iconView setContentCompressionResistancePriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
         [contentView addSubview:_iconView];
@@ -153,7 +153,7 @@
     }
 }
 
-- (void)layoutSubviews:(UIView *)contentView {
+- (void)layoutSubviewsAt:(UIView *)contentView {
     BOOL iconEmpty = _iconView == nil;
     BOOL titleEmpty = _titleLabel == nil;
     BOOL subtitleEmpty = _subtitleLabel == nil;
