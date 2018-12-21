@@ -20,7 +20,7 @@ final class DefaultWating: ToastContent, DefaultWaitingExport, DefaultCurrentWai
     }
 
 
-    var contentInset: UIEdgeInsets = UIEdgeInsetsMake(8, 8, 8, 8)
+    var contentInset: UIEdgeInsets = UIEdgeInsets.init(top: 8, left: 8, bottom: 8, right: 8)
     @discardableResult
     public func contentInset(_ inset: UIEdgeInsets) -> DefaultWating {
         contentInset = inset

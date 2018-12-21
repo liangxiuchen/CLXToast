@@ -103,7 +103,7 @@ public final class Toast: UIView, Toastable {
 
     public override func updateConstraints() {
         super.updateConstraints();
-        var size = contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize);
+        var size = contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize);
         //默认大小为20
         size.width = size.width > 0 ? size.width : 20
         size.height = size.height > 0 ? size.height : 20
@@ -340,7 +340,7 @@ extension Toast {
                 let centerY = NSLayoutConstraint(item: self, attribute: .centerY, relatedBy: .equal, toItem: container, attribute: .centerY, multiplier: 1, constant: 0)
                 container.addConstraints([centerX, centerY])
 
-                var size = contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize);
+                var size = contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize);
                 //默认大小为20
                 size.width = size.width > 0 ? size.width : 20
                 size.height = size.height > 0 ? size.height : 20
@@ -387,7 +387,7 @@ extension Toast {
             self.addConstraints([centerX, centerY])
 
 
-            var size = contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize);
+            var size = contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize);
             //默认大小为20
             size.width = size.width > 0 ? size.width : 20
             size.height = size.height > 0 ? size.height : 20

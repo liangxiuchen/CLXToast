@@ -97,11 +97,11 @@
 		0DDE3BA60F89417C74599433DDD306DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13A8371605238453AF7CD98FF061AEE9 /* Pods-CLXToast_Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		16419AD7E2816B13BF0F5C2C0728BBB3 /* Pods-CLXToast_Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		28F92C96049C13F175CF8DFE91E0E0BA /* CLXToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CLXToast.framework; path = CLXToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F92C96049C13F175CF8DFE91E0E0BA /* CLXToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLXToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD78EACB898AC81D1D9A0A6260E4181 /* Pods-CLXToast_Objc-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CLXToast_Objc-acknowledgements.plist"; sourceTree = "<group>"; };
-		2BCF163699AF7BDD942F5C1FF7CE6473 /* Pods_CLXToast_ObjcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLXToast_ObjcTests.framework; path = "Pods-CLXToast_ObjcTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCF163699AF7BDD942F5C1FF7CE6473 /* Pods_CLXToast_ObjcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_ObjcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDBDC354E25CC8CD1DAC3D7A3B092C0 /* CLXDefaultWaiting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLXDefaultWaiting.m; sourceTree = "<group>"; };
-		321CF62C3DC9CDBA8F4DE3499FE4489D /* Pods_CLXToast_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLXToast_Objc.framework; path = "Pods-CLXToast_Objc.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		321CF62C3DC9CDBA8F4DE3499FE4489D /* Pods_CLXToast_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		361E8CAA7CFAC5518ECD1ABAEC9136A9 /* Pods-CLXToast_ObjcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_ObjcTests-frameworks.sh"; sourceTree = "<group>"; };
 		36E810F7738DA0988387414DDA53640B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../CLXToast-Objc-Toast/Info.plist"; sourceTree = "<group>"; };
 		3EAB9ACC471993FD872A455E55BD99C7 /* CLXToast-Objc-Toast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "CLXToast-Objc-Toast.modulemap"; path = "../CLXToast-Objc-Toast/CLXToast-Objc-Toast.modulemap"; sourceTree = "<group>"; };
@@ -109,14 +109,14 @@
 		404EDCC81A5BD1462A52EC72926429C2 /* Pods-CLXToast_Swift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLXToast_Swift_Tests-dummy.m"; sourceTree = "<group>"; };
 		426987A5944E13F06B6AD98A46C1B2B8 /* Pods-CLXToast_Swift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Swift_Example-resources.sh"; sourceTree = "<group>"; };
 		42CC6079B190A2E33F6CC69A7D7899DF /* Pods-CLXToast_Swift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CLXToast_Swift_Tests.modulemap"; sourceTree = "<group>"; };
-		435B49ED8EF385A8058F766508FDE304 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		435B49ED8EF385A8058F766508FDE304 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		47D93ED508E7693E44882E1C26322E3E /* DefaultWaiting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultWaiting.swift; path = CLXToast/Classes/DefaultWaiting.swift; sourceTree = "<group>"; };
 		4FBE8A9E9E569978C35EB21DFF22F137 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5022CFC9B3E8735BEBE1FE81F8C0518A /* CLXToast-Objc-Toast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLXToast-Objc-Toast-prefix.pch"; path = "../CLXToast-Objc-Toast/CLXToast-Objc-Toast-prefix.pch"; sourceTree = "<group>"; };
-		587DC5054C7C474EB8615CDBF7110BA1 /* CLXToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CLXToast.framework; path = "CLXToast-Objc-Toast.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		587DC5054C7C474EB8615CDBF7110BA1 /* CLXToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLXToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5CAF16D5A24BE9F13342264CB371AC83 /* Pods-CLXToast_ObjcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLXToast_ObjcTests-dummy.m"; sourceTree = "<group>"; };
-		5F973EAEB9B7F9D7639B6C65D94A26E8 /* CLXToast.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CLXToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5F973EAEB9B7F9D7639B6C65D94A26E8 /* CLXToast.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CLXToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5FEE3966579250A0897A67D360F507C1 /* Pods-CLXToast_Swift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLXToast_Swift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6A2BF89FED1A68871B16CF5A53E224B5 /* Pods-CLXToast_Swift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLXToast_Swift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6B37BB31C69A9FD097AA76405162EE66 /* CLXOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CLXOperation.h; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		9119A4BE5D5F84B29F9BE2DDA6156DFD /* Pods-CLXToast_Swift_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Swift_Tests-resources.sh"; sourceTree = "<group>"; };
 		92F96BF0A84983AF9C13B7923EF4019C /* CLXToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CLXToast.xcconfig; sourceTree = "<group>"; };
 		931CB7BF1465360669406BBF6ABCDB2A /* CLXToast+internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CLXToast+internal.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95D50281AA0623C44893CA3FE7DAD3C0 /* Pods-CLXToast_Objc-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CLXToast_Objc-umbrella.h"; sourceTree = "<group>"; };
 		974D6CD25884C254C7AB3CAE6CF95DC5 /* CLXContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CLXContent.m; sourceTree = "<group>"; };
 		9A9343BF593926FFF79D7BC987BF3480 /* Pods-CLXToast_Objc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CLXToast_Objc.modulemap"; sourceTree = "<group>"; };
@@ -148,11 +148,11 @@
 		A84D0E3DCB99CB0CCE25132DCED36F0B /* Pods-CLXToast_ObjcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_ObjcTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC6AFEF882D17104528BA47D0AC9D84F /* Pods-CLXToast_ObjcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CLXToast_ObjcTests.modulemap"; sourceTree = "<group>"; };
 		AF8941268156CE241DDE62D8354AB5AE /* Pods-CLXToast_Objc-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CLXToast_Objc-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B5D3736AFF64534D6522EB24FB362365 /* Pods_CLXToast_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLXToast_Swift_Example.framework; path = "Pods-CLXToast_Swift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D3736AFF64534D6522EB24FB362365 /* Pods_CLXToast_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8689BCE398A746AD295BBD06B749DF6 /* Pods-CLXToast_Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CLXToast_Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B9E28A53DD17B20B9B28122089E55B08 /* Pods_CLXToast_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CLXToast_Swift_Tests.framework; path = "Pods-CLXToast_Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E28A53DD17B20B9B28122089E55B08 /* Pods_CLXToast_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBFA179F308D959B3BE277704E42687 /* Pods-CLXToast_Swift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CLXToast_Swift_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		C2B6526DF236AB68314E92D7957B95CC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C2B6526DF236AB68314E92D7957B95CC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C3E07C59AC8EBB7336009A68792217A1 /* DefaultHud.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultHud.swift; path = CLXToast/Classes/DefaultHud.swift; sourceTree = "<group>"; };
 		C56798FB4FC54F01954DCE3572DA6D86 /* Pods-CLXToast_Swift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CLXToast_Swift_Example.modulemap"; sourceTree = "<group>"; };
 		CCF947FE4AE904981152062F75602D63 /* Pods-CLXToast_Objc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CLXToast_Objc-dummy.m"; sourceTree = "<group>"; };
@@ -258,7 +258,6 @@
 				EF86D9A145DE665F8B8B661E569A9618 /* CLXDefaultWaiting.h */,
 				2CDBDC354E25CC8CD1DAC3D7A3B092C0 /* CLXDefaultWaiting.m */,
 			);
-			name = DefaultContent;
 			path = DefaultContent;
 			sourceTree = "<group>";
 		};
@@ -288,7 +287,6 @@
 				6B37BB31C69A9FD097AA76405162EE66 /* CLXOperation.h */,
 				F98C5E333178280C9BB68848A23D9353 /* CLXOperation.m */,
 			);
-			name = Operation;
 			path = Operation;
 			sourceTree = "<group>";
 		};
@@ -356,7 +354,6 @@
 				03F0FC4AF53BA6A5A30BDEE9D83D3CE9 /* CLXToast.m */,
 				931CB7BF1465360669406BBF6ABCDB2A /* CLXToast+internal.h */,
 			);
-			name = Base;
 			path = Base;
 			sourceTree = "<group>";
 		};
@@ -440,7 +437,6 @@
 				6C43976D9E043B608D0523E1E2FDCB3B /* CLXHudActivityContent.h */,
 				A0ABAEAF4FA716E3DA030F18BD2CA5DC /* CLXHudActivityContent.m */,
 			);
-			name = CustomicContent;
 			path = CustomicContent;
 			sourceTree = "<group>";
 		};
@@ -649,6 +645,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					CBF6824C12DDCC74543F1BE2E610B2F1 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -828,7 +829,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -989,7 +990,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

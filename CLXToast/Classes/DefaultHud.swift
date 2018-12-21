@@ -20,7 +20,7 @@ final class DefaultHud: ToastContent, DefaultHudExport {
         return self.toast!.show(animated: animated, with: completion)
     }
 
-    var contentInset: UIEdgeInsets = UIEdgeInsetsMake(12, 12, 12, 12)
+    var contentInset: UIEdgeInsets = UIEdgeInsets.init(top: 12, left: 12, bottom: 12, right: 12)
     @discardableResult
     public func contentInset(_ inset: UIEdgeInsets) -> DefaultHud {
         contentInset = inset
@@ -236,7 +236,7 @@ final class DefaultHud: ToastContent, DefaultHudExport {
         let wrapper = self.userWrapperForTitlesInAllItemExist()
         contentView.addSubview(wrapper)
 
-        let wrapper_size = wrapper.systemLayoutSizeFitting(UILayoutFittingCompressedSize);
+        let wrapper_size = wrapper.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize);
         _iconView.sizeToFit()
 
         let icon_heigher = _iconView.bounds.size.height > wrapper_size.height
