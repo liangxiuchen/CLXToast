@@ -10,7 +10,6 @@
 		29F35C67A493050D79A50FDD /* Pods_CLXToast_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D804381C46EC1DAFF1A2AE13 /* Pods_CLXToast_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		70C88343E3AB8FB6141FE98C /* Pods_CLXToast_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014338565D25CFC9F912DE8 /* Pods_CLXToast_Swift_Example.framework */; };
-		724A365A201DC89B0016FBF9 /* ToastDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 724A3659201DC89B0016FBF9 /* ToastDemo.gif */; };
 		C05F485491391837D917661E /* Pods_CLXToast_Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9942C4EB75F8EC9B75114F /* Pods_CLXToast_Swift_Tests.framework */; };
 		FA92E0AD21951F8700EF6FB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92E0A321951F8700EF6FB8 /* ViewController.swift */; };
 		FA92E0AE21951F8700EF6FB8 /* CustomHudContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92E0A421951F8700EF6FB8 /* CustomHudContent.swift */; };
@@ -274,7 +273,6 @@
 				FA92E0B221951F8700EF6FB8 /* Images.xcassets in Resources */,
 				FA92E0B421951F8700EF6FB8 /* Info.plist in Resources */,
 				FA92E0B021951F8700EF6FB8 /* LaunchScreen.xib in Resources */,
-				724A365A201DC89B0016FBF9 /* ToastDemo.gif in Resources */,
 				FA92E0B121951F8700EF6FB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

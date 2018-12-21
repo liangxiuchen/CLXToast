@@ -1,7 +1,7 @@
 PODS:
-  - CLXToast (0.3.3):
-    - CLXToast/Objc-Toast (= 0.3.3)
-  - CLXToast/Objc-Toast (0.3.3)
+  - CLXToast (0.4.0):
+    - CLXToast/Objc-Toast (= 0.4.0)
+  - CLXToast/Objc-Toast (0.4.0)
 
 DEPENDENCIES:
   - CLXToast (from `../`)
@@ -12,7 +12,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CLXToast: 2a6dc764bd9be7bd34724435a3a8d08a25ec92ae
+  CLXToast: 942708ed87d21a565fb61afc725eaf9998636b7b
 
 PODFILE CHECKSUM: f2dad45d82979aada763cb5404f5e131da2f5f5f
 
