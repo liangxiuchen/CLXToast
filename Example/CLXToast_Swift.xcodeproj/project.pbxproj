@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		0953D0376A24D92D75E2202B /* Pods-CLXToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLXToast_Tests/Pods-CLXToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		154227BEDD31E3F697E31B08 /* CLXToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CLXToast.podspec; path = ../CLXToast.podspec; sourceTree = "<group>"; };
+		154227BEDD31E3F697E31B08 /* CLXToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CLXToast.podspec; path = ../CLXToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1CC7456E5369FB37F6C96E43 /* Pods-CLXToast_Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLXToast_Swift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLXToast_Swift_Tests/Pods-CLXToast_Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2B9942C4EB75F8EC9B75114F /* Pods_CLXToast_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5014338565D25CFC9F912DE8 /* Pods_CLXToast_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLXToast_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +250,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -506,7 +507,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -521,7 +522,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
