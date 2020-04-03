@@ -22,17 +22,17 @@ class CustomHudContent: ToastContent {
     
     override func layoutSubviews(at contentView: UIView) {
         customView.translatesAutoresizingMaskIntoConstraints = false
-        let leading = NSLayoutConstraint(item: customView, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 0);
+        let leading = NSLayoutConstraint(item: customView as Any, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 0);
 
-        let top = NSLayoutConstraint(item: customView, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 0);
+        let top = NSLayoutConstraint(item: customView as Any, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 0);
 
-        let bottom = NSLayoutConstraint(item: customView, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: 0)
+        let bottom = NSLayoutConstraint(item: customView as Any, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: 0)
 
-        let trailing = NSLayoutConstraint(item: customView, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: 0);
+        let trailing = NSLayoutConstraint(item: customView as Any, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: 0);
 
-        let width = NSLayoutConstraint(item: customView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 175)
+        let width = NSLayoutConstraint(item: customView as Any, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 175)
         
-        let height = NSLayoutConstraint(item: customView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 179)
+        let height = NSLayoutConstraint(item: customView as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 179)
         contentView.addConstraints([leading, top, bottom, trailing, width, height])
     }
 }

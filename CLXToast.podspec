@@ -31,7 +31,7 @@ fix custom Operation Dependence lead to lazy release issue.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'CLXToast/Classes/**/*'
-  
+  s.swift_version = '5.0'
   # s.resource_bundles = {
   #   'CLXToast' => ['CLXToast/Assets/*.png']
   # }
