@@ -187,33 +187,33 @@ final class DefaultHud: ToastContent, DefaultHudExport {
     }
 
     func constraintTitleWithSubtitle(in contentView: UIView) {
-        let leading = NSLayoutConstraint(item: _titleLabel, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left);
+        let leading = NSLayoutConstraint(item: _titleLabel as Any, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left);
 
-        let top = NSLayoutConstraint(item: _titleLabel, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top);
+        let top = NSLayoutConstraint(item: _titleLabel as Any, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top);
 
-        let trailing = NSLayoutConstraint(item: _titleLabel, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right);
+        let trailing = NSLayoutConstraint(item: _titleLabel as Any, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right);
 
         contentView.addConstraints([leading, top, trailing])
     }
 
     func constraintSubtitleWithTitle(in contentView: UIView) {
-        let leading = NSLayoutConstraint(item: _subtitleLabel, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left);
+        let leading = NSLayoutConstraint(item: _subtitleLabel as Any, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left);
 
-        let top = NSLayoutConstraint(item: _subtitleLabel, attribute: .top, relatedBy: .equal, toItem: _titleLabel, attribute: .bottom, multiplier: 1, constant: _titlesSpace);
+        let top = NSLayoutConstraint(item: _subtitleLabel as Any, attribute: .top, relatedBy: .equal, toItem: _titleLabel, attribute: .bottom, multiplier: 1, constant: _titlesSpace);
 
-        let trailing = NSLayoutConstraint(item: _subtitleLabel, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right);
+        let trailing = NSLayoutConstraint(item: _subtitleLabel as Any, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -contentInset.right);
 
-        let bottom = NSLayoutConstraint(item: _subtitleLabel, attribute: .lastBaseline, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
+        let bottom = NSLayoutConstraint(item: _subtitleLabel as Any, attribute: .lastBaseline, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
 
         contentView.addConstraints([leading, top, trailing, bottom])
     }
 
     func constraintIconWithALabel(in contentView: UIView) {
-        let leading = NSLayoutConstraint(item: _iconView, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left);
+        let leading = NSLayoutConstraint(item: _iconView as Any, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left);
 
-        let top = NSLayoutConstraint(item: _iconView, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top);
+        let top = NSLayoutConstraint(item: _iconView as Any, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top);
 
-        let bottom = NSLayoutConstraint(item: _iconView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
+        let bottom = NSLayoutConstraint(item: _iconView as Any, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
 
         contentView.addConstraints([leading, top, bottom])
     }
@@ -242,14 +242,14 @@ final class DefaultHud: ToastContent, DefaultHudExport {
         let icon_heigher = _iconView.bounds.size.height > wrapper_size.height
 
         //icon
-        let icon_leading = NSLayoutConstraint(item: _iconView, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left);
+        let icon_leading = NSLayoutConstraint(item: _iconView as Any, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: contentInset.left);
 
-        let icon_top = NSLayoutConstraint(item: _iconView, attribute: .top, relatedBy: (icon_heigher ? .equal : .greaterThanOrEqual), toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top)
+        let icon_top = NSLayoutConstraint(item: _iconView as Any, attribute: .top, relatedBy: (icon_heigher ? .equal : .greaterThanOrEqual), toItem: contentView, attribute: .top, multiplier: 1, constant: contentInset.top)
 
-        let icon_bottom = NSLayoutConstraint(item: _iconView, attribute: .bottom, relatedBy: (icon_heigher ? .equal : .lessThanOrEqual), toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
+        let icon_bottom = NSLayoutConstraint(item: _iconView as Any, attribute: .bottom, relatedBy: (icon_heigher ? .equal : .lessThanOrEqual), toItem: contentView, attribute: .bottom, multiplier: 1, constant: -contentInset.bottom)
 
         if icon_heigher == false {
-            let icon_centerY = NSLayoutConstraint(item: _iconView, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0)
+            let icon_centerY = NSLayoutConstraint(item: _iconView as Any, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0)
             contentView.addConstraint(icon_centerY)
         }
 
@@ -269,7 +269,7 @@ final class DefaultHud: ToastContent, DefaultHudExport {
             let wrapper_centerY = NSLayoutConstraint(item: wrapper, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0)
             contentView.addConstraint(wrapper_centerY)
         } else {
-            let icon_centerY = NSLayoutConstraint(item: _iconView, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0)
+            let icon_centerY = NSLayoutConstraint(item: _iconView as Any, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0)
             contentView.addConstraint(icon_centerY)
         }
     }
@@ -283,21 +283,21 @@ final class DefaultHud: ToastContent, DefaultHudExport {
         wrapper.addSubview(_subtitleLabel)
 
         //title
-        let title_leading = NSLayoutConstraint(item: _titleLabel, attribute: .leading, relatedBy: .equal, toItem: wrapper, attribute: .leading, multiplier: 1, constant: 0);
+        let title_leading = NSLayoutConstraint(item: _titleLabel as Any, attribute: .leading, relatedBy: .equal, toItem: wrapper, attribute: .leading, multiplier: 1, constant: 0);
 
-        let title_top = NSLayoutConstraint(item: _titleLabel, attribute: .top, relatedBy: .equal, toItem: wrapper, attribute: .top, multiplier: 1, constant: 0);
+        let title_top = NSLayoutConstraint(item: _titleLabel as Any, attribute: .top, relatedBy: .equal, toItem: wrapper, attribute: .top, multiplier: 1, constant: 0);
 
-        let title_trailing = NSLayoutConstraint(item: _titleLabel, attribute: .trailing, relatedBy: .equal, toItem: wrapper, attribute: .trailing, multiplier: 1, constant: 0);
+        let title_trailing = NSLayoutConstraint(item: _titleLabel as Any, attribute: .trailing, relatedBy: .equal, toItem: wrapper, attribute: .trailing, multiplier: 1, constant: 0);
 
         wrapper.addConstraints([title_leading, title_top, title_trailing])
         //subtitle
-        let subtitle_leading = NSLayoutConstraint(item: _subtitleLabel, attribute: .leading, relatedBy: .equal, toItem: wrapper, attribute: .leading, multiplier: 1, constant: _titlesIconSpace);
+        let subtitle_leading = NSLayoutConstraint(item: _subtitleLabel as Any, attribute: .leading, relatedBy: .equal, toItem: wrapper, attribute: .leading, multiplier: 1, constant: _titlesIconSpace);
 
-        let subtitle_top = NSLayoutConstraint(item: _subtitleLabel, attribute: .top, relatedBy: .equal, toItem: _titleLabel, attribute: .bottom, multiplier: 1, constant: _titlesSpace);
+        let subtitle_top = NSLayoutConstraint(item: _subtitleLabel as Any, attribute: .top, relatedBy: .equal, toItem: _titleLabel, attribute: .bottom, multiplier: 1, constant: _titlesSpace);
 
-        let subtitle_trailing = NSLayoutConstraint(item: _subtitleLabel, attribute: .trailing, relatedBy: .equal, toItem: wrapper, attribute: .trailing, multiplier: 1, constant: 0);
+        let subtitle_trailing = NSLayoutConstraint(item: _subtitleLabel as Any, attribute: .trailing, relatedBy: .equal, toItem: wrapper, attribute: .trailing, multiplier: 1, constant: 0);
 
-        let subtitle_bottom = NSLayoutConstraint(item: _subtitleLabel, attribute: .bottom, relatedBy: .equal, toItem: wrapper, attribute: .bottom, multiplier: 1, constant: 0)
+        let subtitle_bottom = NSLayoutConstraint(item: _subtitleLabel as Any, attribute: .bottom, relatedBy: .equal, toItem: wrapper, attribute: .bottom, multiplier: 1, constant: 0)
 
         wrapper.addConstraints([subtitle_leading, subtitle_top, subtitle_trailing, subtitle_bottom])
 
